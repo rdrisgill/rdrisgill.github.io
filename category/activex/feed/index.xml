@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>activex &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Thu, 27 Nov 2008 19:32:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>SharePoint Name.dll ActiveX Fix has been Featurized</title>
+		<link>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
+					<comments>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 27 Nov 2008 19:32:00 +0000</pubDate>
+				<category><![CDATA[activex]]></category>
+		<category><![CDATA[codeplex]]></category>
+		<guid isPermaLink="false">/?p=603</guid>
+
+					<description><![CDATA[My friend Larry Riemann and I have taken my Name.DLL ActiveX Fix and turned it into a deployable Feature / Solution called SPAXO. The nice thing about SPAXO is that it will apply the fix to all pages on your site no matter what master page is applied without you having to add the Javascript code to your master page manually. We accomplish this by using the .Net HTTPModule to inject the Javascript into the page stream automagically. At this point the code is a major Use At Your Own Risk. If you are feeling daring, head over to Codeplex…]]></description>
+										<content:encoded><![CDATA[<p>My friend Larry Riemann and I have taken my <a href="http://blog.drisgill.com/2007/09/fixing-namedll-activex-problem-mossman.html">Name.DLL ActiveX Fix</a> and turned it into a deployable Feature / Solution called SPAXO. The nice thing about SPAXO is that it will apply the fix to all pages on your site no matter what master page is applied without you having to add the Javascript code to your master page manually. We accomplish this by using the .Net HTTPModule to inject the Javascript into the page stream automagically. At this point the code is a major <strong>Use At Your Own Risk</strong>. If you are feeling daring, head over to Codeplex and give it a shot.</p>
+<p><a href="http://www.codeplex.com/SPAXO">CodePlex: SPAXO (SharePoint ActiveX Override)</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Update to my SharePoint Name.dll ActiveX Fix</title>
+		<link>./../../2008/01/update-to-my-sharepoint-namedll-activex.html</link>
+					<comments>./../../2008/01/update-to-my-sharepoint-namedll-activex.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Tue, 29 Jan 2008 00:06:00 +0000</pubDate>
+				<category><![CDATA[activex]]></category>
+		<category><![CDATA[customization]]></category>
+		<category><![CDATA[name.dll]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=637</guid>
+
+					<description><![CDATA[Dave Ginn recently tried out my name.dll fix (read more about it in my previous post) and ran into a problem with some users not being able to access the Site Actions menu. Personally, I have deployed the code to several external MOSS sites and not run into the problem. Let me know in the comments if you have used my fix code successfully or not, as I&#8217;m trying to determine what sort of setup causes it to occur. Note: Dave fixed his problem with some code modifications and posted it to his site. I may end up rolling this…]]></description>
+										<content:encoded><![CDATA[<div>
+<p>Dave Ginn recently tried out my name.dll fix (<a href="http://themossman.blogspot.com/2007/09/fixing-namedll-activex-problem-mossman.html" target="_blank" rel="noopener">read more about it in my previous post</a>) and ran into a problem with some users not being able to access the Site Actions menu. Personally, I have deployed the code to several external MOSS sites and not run into the problem. Let me know in the comments if you have used my fix code successfully or not, as I&#8217;m trying to determine what sort of setup causes it to occur.</p>
+<p>Note: Dave fixed his problem with some code modifications and <a href="http://www.daveginn.com/post/2008/01/SharePoint-2007-Name-ActiveX-Control-in-IE7.aspx" target="_blank" rel="noopener">posted it to his site</a>. I may end up rolling this code back into my source here at this blog.</p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/01/update-to-my-sharepoint-namedll-activex.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Fixing the name.dll ActiveX Problem the Mossman Way</title>
+		<link>./../../2007/09/fixing-namedll-activex-problem-mossman.html</link>
+					<comments>./../../2007/09/fixing-namedll-activex-problem-mossman.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 13 Sep 2007 23:03:00 +0000</pubDate>
+				<category><![CDATA[activex]]></category>
+		<category><![CDATA[customization]]></category>
+		<category><![CDATA[name.dll]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=644</guid>
+
+					<description><![CDATA[UPDATE: Are you using SharePoint 2010? See my newer post about the name ActiveX message in SharePoint 2010. Have you seen this message on public facing SharePoint sites: The Web site wants to run the following add-on: &#8216;Name ActiveX Control&#8217; from &#8216;Microsoft Corporation&#8217;. If you trust the Web site and the add-on and want to allow it to run, click here&#8230; For an example of one (at least until they fix it), check out: http://www.viacom.com/pages/default.aspx There are quite a few nice examples of internet facing SharePoint 2007 sites on the interwebs these days, however many of them seem to be…]]></description>
+										<content:encoded><![CDATA[<div>
+<p><span>UPDATE: Are you using SharePoint 2010? </span><a href="http://blog.drisgill.com/2010/02/removing-name-activex-control-warning.html"><span>See my newer post about the name ActiveX message in SharePoint 2010</span></a><span>.</span></p>
+<p>Have you seen this message on public facing SharePoint sites:<?xml:namespace prefix = o /></p>
+<p><em>The Web site wants to run the following add-on: &#8216;Name ActiveX Control&#8217; from &#8216;Microsoft Corporation&#8217;. If you trust the Web site and the add-on and want to allow it to run, click here&#8230;</em></p>
+<p>For an example of one (at least until they fix it), check out:</p>
+<p><a href="http://www.viacom.com/pages/default.aspx">http://www.viacom.com/pages/default.aspx</a><a href="http://www.mseventseurope.com/teched/07/itforum/content/Pages/Default.aspx" target="_blank" rel="noopener"></a></p>
+<p>There are quite a few nice examples of internet facing SharePoint 2007 sites on the interwebs these days, however many of them seem to be plagued by this minor annoyance that seems to have slipped through the Microsoft cracks. The problem is compounded by the fact that most developers won&#8217;t even notice the issue until their portal is available to internet users. This is due to the fact that the problem is seen only in Internet Explorer 7 and only when you are visiting a WSS v3 website that is NOT in your trusted site list for IE. You will not see the message most of the time in your local environment because, by default IE knows you are visiting an intranet site and auto-magically puts the site in your trusted list&#8230; then as soon as you visit the site with an external domain name, boom, your see the warning pop up.</p>
+<p>Apparently, SharePoint is trying to access &#8220;Presence&#8221; information that is available in Office, and for some reason they decided to name this ActiveX &#8220;name.dll&#8221;, which really couldn&#8217;t sound more like a trojan horse. Asking for more information on the ActiveX control doesn&#8217;t help either. Most end users get immediately turned off to your website, and generally its just not a very professional way to present your portal.</p>
+<p>So, I&#8217;m sure your thinking &#8220;Mossman, how do I correct this problem?&#8221; Microsoft has a knowledgebase article on the topic here: <a href="http://support.microsoft.com/kb/931509" target="_blank" rel="noopener">http://support.microsoft.com/kb/931509</a>. But, at least for me, this never works, since the &#8220;InitNoPresence.js&#8221; seems to always load after my custom .js in a SharePoint publishing site. What I do instead is include my own custom javascript file in the PlaceHolderAdditionalPageHead of my master page which overrides the offending out of the box javascript line. This ensure2 that our javascript is always loaded last in the chain (which is key). I have no idea if this is an approved way of tackling the problem, but it effectively does the same thing described in the kb article, only it actually works. So, without further fanfare, I will show you my code. You are free to use it in your sites but please leave in my comments.</p>
+<p>In your master page, place a reference to my custom javascript file in your <head> section after a PlaceHolderAdditionalPageHead, like this:</p>
+<blockquote>
+<p><head runat="server"></p>
+<p><asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"/> </p>
+<p><script type="text/javascript" src="/_catalogs/masterpage/custom_activex_override.js"></script> </p>
+<p></head></p>
+</blockquote>
+<p>Now upload the following javascript file to the &#8220;<em>_catalogs/masterpage&#8221;</em> directory of your SharePoint site. Also, you might as well Publish and Approve the uploaded file as well (since anonymous users won&#8217;t be able to see it otherwise).</p>
+<p><a href="http://www.drisgill.com/files/mossman/custom_activex_override.js" target="_blank" rel="noopener">custom_activex_override.js</a></p>
+<p>Basically, this javascript file overrides the out of the box &#8220;ProcessDefaultOnLoad&#8221; and comments out the call to &#8220;ProcessImn()&#8221; which causes the ActiveX to be called.</p>
+<p>Please, feel free to try it out and let me know if you experience any problems or if you have any suggestions on better ways to tackle this problem.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2007/09/fixing-namedll-activex-problem-mossman.html/feed/index.html</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

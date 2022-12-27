@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>web part &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Wed, 27 Feb 2008 19:52:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Mossman&#039;s Weather Web Part</title>
+		<link>./../../2008/02/mossmans-weather-web-part.html</link>
+					<comments>./../../2008/02/mossmans-weather-web-part.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 27 Feb 2008 19:52:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<category><![CDATA[web part]]></category>
+		<guid isPermaLink="false">/?p=636</guid>
+
+					<description><![CDATA[I recently created a simple weather web part to enter into Iain Munro&#8217;s content editor web part contest. Actually, I created two, one using the US National Weather service feeds which don&#8217;t seem to have restrictions on usage, and one that worked with Yahoo weather which has some restrictions on for-profit usage. Iain wanted the Yahoo one because it supports other countries other than the US, but there seems to be some stability issues with the Yahoo Weather RSS feed, where sometimes it doesn&#8217;t send the full data (has anyone else experienced this?). So for now, I will just post…]]></description>
+										<content:encoded><![CDATA[<div>
+<p><span>I recently created a simple weather web part to enter into <a href="http://www.contenteditorwebpart.com/default.aspx" target="_blank" rel="noopener">Iain Munro&#8217;s content editor web part contest</a>. Actually, I created two, one using the US National Weather service feeds which don&#8217;t seem to have restrictions on usage, and one that worked with Yahoo weather which has some restrictions on for-profit usage. Iain wanted the Yahoo one because it supports other countries other than the US, but there seems to be some stability issues with the Yahoo Weather RSS feed, where sometimes it doesn&#8217;t send the full data (has anyone else experienced this?). So for now, I will just post the National Weather service one. To use it, add the web part to your page and to change the city listed, just modify the shared web part and edit the XML Link to reflect one of the XML URLs listed at this url: <a href="http://www.weather.gov/data/current_obs/seek.php?state=fl&#038;Find=Find">http://www.weather.gov/data/current_obs/seek.php?state=fl&#038;Find=Find</a></p>
+<p></span></p>
+<p><span>Download the Web Part here: <a href="http://209.208.125.75/~randy/moss/CurrentWeather_WebPart.zip">CurrentWeather_WebPart.zip</a></p>
+<p></span></p>
+<p><span><img decoding="async" src="http://209.208.125.75/~randy/moss/weather.jpg"></span><span></p>
+<p></span></p>
+<p><p> </p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/02/mossmans-weather-web-part.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

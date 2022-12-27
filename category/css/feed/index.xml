@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>css &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Thu, 04 Oct 2007 23:02:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Using Firebug to Manage CSS Effectively</title>
+		<link>./../../2007/10/using-firebug-to-manage-css-effectively.html</link>
+					<comments>./../../2007/10/using-firebug-to-manage-css-effectively.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 04 Oct 2007 23:02:00 +0000</pubDate>
+				<category><![CDATA[css]]></category>
+		<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=643</guid>
+
+					<description><![CDATA[I often talk about the benefits of using Firebug for Firefox in the MSDN Design and Customization Forums. Rather than try to type out a long winded article on why it rules, I found a video that should help to convince non believers that it is truly superior to the IE Developers Toolbar: Firebug 1.0 Beta Screencast by Jesse Newland  Takes a little bit of time to download the video, but its worth it.]]></description>
+										<content:encoded><![CDATA[<div>
+<p>I often talk about the benefits of using <a href="http://www.getfirebug.com/">Firebug</a> for Firefox in the <a href="http://forums.microsoft.com/MSDN/ShowForum.aspx?ForumID=1202&#038;SiteID=1">MSDN Design and Customization Forums</a>. Rather than try to type out a long winded article on why it rules, I found a video that should help to convince non believers that it is truly superior to the IE Developers Toolbar:</p>
+<p><span><a href="http://files.jnewland.com/firebug.mov">Firebug 1.0 Beta Screencast</a></span><span> by <a href="http://jnewland.com/">Jesse Newland</a></p>
+<p></span></p>
+<p> Takes a little bit of time to download the video, but its worth it.</p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2007/10/using-firebug-to-manage-css-effectively.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CSS Friendly Control Adapters in SharePoint 2007 (A Walk-Through)</title>
+		<link>./../../2007/03/css-friendly-control-adapters-in.html</link>
+					<comments>./../../2007/03/css-friendly-control-adapters-in.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 08 Mar 2007 23:37:00 +0000</pubDate>
+				<category><![CDATA[css]]></category>
+		<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=653</guid>
+
+					<description><![CDATA[My good friend John Ross just managed to get the CSS Friendly Control Adapters working in a SharePoint 2007 Publish Site, and I was able to talk him into posting a guest blog entry on the topic. If you aren&#8217;t familiar with them, you should check out the CSS Friendly Control Adapters here, they are very helpful in creating CSS only, standards compliant controls (like the menu and treeView) for easy styling. I also noted that Microsoft was kind enough to allow the community to take over the development and enhancements of the adapters in an open source model. You…]]></description>
+										<content:encoded><![CDATA[<p>My good friend John Ross just managed to get the CSS Friendly Control Adapters working in a SharePoint 2007 Publish Site, and I was able to talk him into posting a guest blog entry on the topic. If you aren&#8217;t familiar with them, you should check out the CSS Friendly Control Adapters <a href="http://www.asp.net/cssadapters/">here</a>, they are very helpful in creating CSS only, standards compliant controls (like the menu and treeView) for easy styling. I also noted that Microsoft was kind enough to allow the community to take over the development and enhancements of the adapters in an open source model. You can read more about that news in <a href="http://forums.asp.net/thread/1609640.aspx">their forums</a>. So without further fanfare, here is John Ross&#8217;s CSS Friendly Adapters in SharePoint 2007 walk-through:</p>
+<p>One of biggest selling points for SharePoint 2007 is that it is built on top of ASP.NET 2.0.  That means, that if you create a design that will work in ASP.NET 2.0 it will work in SharePoint 2007 right?  The short answer is yes!  But the big question is “How do you do it?”  As we were trying to recreate our design concept for an Internet-facing website in SharePoint, we were quickly able to create a new master page and get our page very close to our concept.  However, styling the navigation proved to be a challenge.  If you view the source for the default navigation that is rendered in the browser you’ll notice that it is full of tables.  Very messy indeed!  There had to be a better way – CSS Friendly ASP.NET 2.0 Control Adapters seemed like the answer.</p>
+<p>Using a post from one of the developers at Tam Tam) <a href="http://blogs.tamtam.nl/frank/PermaLink,guid,aad39854-4f7d-4666-8a0a-0fc02f3cd01b.aspx">http://blogs.tamtam.nl/frank/PermaLink,guid,aad39854-4f7d-4666-8a0a-0fc02f3cd01b.aspx</a>) from back in August 2006, it provided a good start.  But if one were to follow these instructions to the letter, they will run into a problem (which I’ll talk about later).  This post will repeat many of the steps outlined in this original post, but will provide additional detail about getting the CSS Friendly ASP.NET 2.0 Control Adapters to work.</p>
+<p>1) Download and install the ASP.NET 2.0 CSS Friendly Control Adapters (<a href="http://msdn.microsoft.com/vstudio/eula.aspx?id=%20096D9643-2597-4a3b-82E3-8863145E4A3D">http://msdn.microsoft.com/vstudio/eula.aspx?id=%20096D9643-2597-4a3b-82E3-8863145E4A3D</a>)</p>
+<p>(<b>NOTE:</b> I had some trouble with the install and had to select all of the content items for install otherwise it didn’t work.  Don’t quote me on that, but that’s what I had to do).</p>
+<p>2) Once you’ve installed the Adapters, open Visual Studio 2005 and create a new Web Site (File > New > Web Site).   If the install was successful, you should have two new options under ‘My Templates.’  Select ‘ASP.NET CSS Friendly Web Site’ and specify the location where you want to save the web site, and select the language.  I’ve only tried Visual C# so I can’t validate these steps for Visual Basic.</p>
+<p>3) Now that you’ve created a Web Site, you’ll need to create a new Project (File > New > Project) based on a ‘Class Library.’  </p>
+<p>In your new Project, you’ll need to copy some files from the Web Site that you created and saved in Step 2.  To do this, go to the project name in Solution Explorer, Right-click, then select Add > Existing Item.  Browse to the location of the Web Site saved previously and select all of the files from the App_Code\Adapters and App_Browsers folders.</p>
+<p>You’ll also need to add references to System.Web and System.configuration.</p>
+<p>4) Sign and Build your Class Library.</p>
+<p>5) Copy the .dll that was created when you built your class library into the GAC (C:\Windows\Assembly).  This will register the .dll. </p>
+<p>6) You may have noticed a file called ‘CSSFriendlyAdapters.browser’ that was added to the project.  Open the file and modify it so that it looks like this:</p>
+<p><browsers></p>
+<p>  <browser refID="Default"></p>
+<p>      <controlAdapters></p>
+<p><adapter controlType="System.Web.UI.WebControls.Menu" adapterType="CSSFriendly.MenuAdapter, CSSFriendlyControlsLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=<your token>&#8221; /></p>
+<p></controlAdapters></p>
+<p>  </browser></p>
+<p></browsers></p>
+<p><b>NOTE:</b> The highlighted text represents the same of the .dll file installed in the GAC.  You can name your Project whatever you like, but the code in the .browser file must match.  The ‘PublicKeyToken’ value can be found by Right-clicking on the .dll in the GAC that you just installed and selecting ‘Properties.’  Copy and paste the Public Key Token into the .browser file.</p>
+<p>7) Once you’ve made the changes to the .browser file, save the file.  </p>
+<p>8) You’ll need to copy the .browser file to the following directory:</p>
+<p>C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\Browsers</p>
+<p>9) Open the Visual Studio Command Prompt (Start > Programs > Microsoft Visual Studio 2005 > Visual Studio Tools > Visual Studio Command Prompt) and enter the following command:</p>
+<p>aspnet_regbrowsers –i</p>
+<p><b>IMPORTANT NOTE:</b>  You’ll notice that if it was successful, the message will read that ASP.BrowserCapsFactory.dll has been successfully installed.  This is important because if you happen to do something that messes things up, the way to undo the damage is to delete the entry for this .dll from the GAC, remove your custom .browser file, then rerun the aspnet_regbrowsers –i command.  </p>
+<p>10) Almost done.  But you’ll notice if you stop here, you’ll get a really fun error:</p>
+<p><b><a href="http://www.sharepointblogs.com/photos/mossman/images/20684/original.aspx"></a></b></p>
+<p><sorry LOST I LOST THIS IMAGE - MOSSMAN></p>
+<p>The final step is to go to ..\12\CONFIG\compat.browser and comment out the final four browser tags (ids: InfrawareSamSung, InfrawareLG, InfrawareSKY, InfrawareMotorola).  You’ll also need to make the change to compat.browser files in any SP sites in IIS that have been created previously (C:\Inetpub\wwwroot\wss\VirtualDirectories\<your App Pool>\App_Browsers).  </p>
+<p>That’s it!  It’s just that easy!  </p>
+<p>A few final notes.  You’d have to make these changes on any web server that you plan to run the controls on.  You’d just have to drop the .dll into the GAC and modify and install the .browser files.  </p>
+<p>And lastly – since nothing in SharePoint can be easy here’s the bad news.  If you try adding another line to the .browser file to enable the CSS Friendly Tree Control at first glance everything will work fine.  But if you try going to Site Actions > Manage Content and Structure you’ll get the dreaded SP error message (this is where the rollback method comes in handy!).  We are still in the process of trying to crack this nut, but as of now it looks like we are stuck.  If and when we find a solution we’ll post about that.</p>
+<p>A big thanks to Bernie Johnsen for helping to get this working!  </p>
+<p>-John Ross</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2007/03/css-friendly-control-adapters-in.html/feed/index.html</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

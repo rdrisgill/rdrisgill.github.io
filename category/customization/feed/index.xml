@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>customization &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Thu, 07 Aug 2008 19:08:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Disabling Themes on Custom Master Pages</title>
+		<link>./../../2008/08/disabling-themes-on-custom-master-pages.html</link>
+					<comments>./../../2008/08/disabling-themes-on-custom-master-pages.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 07 Aug 2008 19:08:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<guid isPermaLink="false">/?p=617</guid>
+
+					<description><![CDATA[Ran into an interesting problem where I wanted my custom master page to NOT show my theme. I only wanted the theme to show on the _layouts pages and anywhere else not styled by my custom master page. You would think this would be as easy as simple removing this line from the master page: The problem I ran into was even with this line removed, SharePoint would still show my theme on the custom master page after I applied it. Turns out SharePoint adds this line to your code:]]></description>
+										<content:encoded><![CDATA[<p>Ran into an interesting problem where I wanted my custom master page to NOT show my theme. I only wanted the theme to show on the _layouts pages and anywhere else not styled by my custom master page. You would think this would be as easy as simple removing this line from the master page:</p>
+<blockquote><p><span><sharepoint:theme runat="server"></span></p></blockquote>
+<p>The problem I ran into was even with this line removed, SharePoint would still show my theme on the custom master page after I applied it. Turns out SharePoint adds this line to your code:</p>
+<blockquote><p><span><meta name="Microsoft Theme" content="Breeze2 1011,<br />default&#8221;></span></p></blockquote>
+<p>This ends up telling SharePoint to just go ahead and load the theme. The next maddening thing I found was that some master pages weren&#8217;t having the theme applied. Turns out, the key to having SharePoint NOT apply the theme automagically is to have a master page that is NOT customized (or one that is ghosted if you prefer that lingo). If you apply your custom master page from a Feature instead of customizing it with SharePoint designer, SharePoint will no longer add the meta tag and thus will not load the theme. So, there you have it, one more reason not to customize master pages in production.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/08/disabling-themes-on-custom-master-pages.html/feed/index.html</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Turning on Detailed Error Messages in SharePoint 2007</title>
+		<link>./../../2008/07/turning-on-detailed-error-messages-in.html</link>
+					<comments>./../../2008/07/turning-on-detailed-error-messages-in.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Fri, 01 Aug 2008 04:23:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<guid isPermaLink="false">/?p=619</guid>
+
+					<description><![CDATA[This post is not really that novel but I link to other peoples blogs for this topic constantly, so I might as well make my own post with this information: When customizing SharePoint its fairly easy to make an error or omit something… if and when you do, an out-of-the-box SharePoint site will simply respond by displaying a page that says “An unexpected error has occurred”. I don’t need to tell anyone that this is less than helpful when you are trying to debug something (though it makes total sense for a default setting from a security and usability point…]]></description>
+										<content:encoded><![CDATA[<p>This post is not really that novel but I link to other peoples blogs for this topic constantly, so I might as well make my own post with this information:</p>
+<p>When customizing SharePoint its fairly easy to make an error or omit something… if and when you do, an out-of-the-box SharePoint site will simply respond by displaying a page that says “<em>An unexpected error has occurred</em>”. I don’t need to tell anyone that this is less than helpful when you are trying to debug something (though it makes total sense for a default setting from a security and usability point of view). In order to see detailed error messages you need to make some very simple changes to the web.config file located on the server that hosts your SharePoint site. Here are the steps:</p>
+<ol>
+<li>Login to the Windows server that hosts your SharePoint site and navigate to the website root folder (typically a subdirectory of C:\Inetpub\wwwroot\wss\VirtualDirectories).</li>
+<li>Edit the file named “web.config” with Notepad or any other text editor.</li>
+<li>Find the line of code that contains the word “CallStack”, which should look like “<em><safemode maxcontrols="200" callstack="false" directfiledependencies="10" totalfiledependencies="50" allowpageleveltrace="false"></safemode></em>” and change both the CallStack and AllowPageLevelTrace settings from “false” to “true”.</li>
+<li>Next find the line of code that contains the word “Errors”, you should see a line that looks like “<em><customerrors mode="On"></customerrors></em>”. Change the mode from “On” to “Off”.</li>
+<li>Save and close the file. </li>
+</ol>
+<p><strong>Warning</strong>: this will cause IIS to restart the web application that your SharePoint site lives in (so don’t just do it randomly on a site that other people are using… also it’s probably not a great idea to turn on detailed errors on a production machine for any long period of time).</p>
+<p>Once you have made these changes, the error message should now provide a lot more helpful information such as “<em>Cannot find ContentPlaceHolder &#8216;PlaceHolderPageImage&#8217; in the master page &#8216;/_catalogs/masterpage/custom.master&#8217;, verify content control&#8217;s ContentPlaceHolderID attribute in the content page</em>”.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/turning-on-detailed-error-messages-in.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Quick Hack: Show Which Web Front End is Being Browsed</title>
+		<link>./../../2008/07/quick-hack-show-which-web-front-end-is.html</link>
+					<comments>./../../2008/07/quick-hack-show-which-web-front-end-is.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Fri, 25 Jul 2008 16:07:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<guid isPermaLink="false">/?p=621</guid>
+
+					<description><![CDATA[Had a request yesterday from a customer that needed a quick and dirty way for their admins to tell which Web Front End server was being currently browsed in their multi-server farm. While we probably should have made a special custom control that read a local file or something&#8230; they opted instead to just make a simple change to the application.master (after making a backup of course). I&#8217;m not a huge fan of editing application.master, but in this instance the change is very minimal. We added a string like &#8220;Web Server 1 &#62; &#8221; before the global navigation placeholder, like…]]></description>
+										<content:encoded><![CDATA[<p>Had a request yesterday from a customer that needed a quick and dirty way for their admins to tell which Web Front End server was being currently browsed in their multi-server farm. While we probably should have made a special custom control that read a local file or something&#8230; they opted instead to just make a simple change to the application.master (after making a backup of course). I&#8217;m not a huge fan of editing application.master, but in this instance the change is very minimal.</p>
+<p>We added a string like &#8220;Web Server 1 &gt; &#8221; before the global navigation placeholder, like this:</p>
+<p></p>
+<blockquote><p>Web Server 1 &gt; <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" runat="server"><br /><asp:SiteMapPath SiteMapProvider="SPSiteMapProvider" id="GlobalNavigationSiteMap" RenderCurrentNodeAsLink="true" SkipLinkText="" NodeStyle-CssClass="ms-sitemapdirectional" runat="server"/><br /></asp:ContentPlaceHolder> </p></blockquote>
+<p></p>
+<p>This basically changes the global breadcrumbs to now look like:</p>
+<blockquote><p>Web Server 1 > Site Name > Subsite Name</p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/quick-hack-show-which-web-front-end-is.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Master Page Error: &#034;The site master page setting currently applied to this site is invalid. Please select a new master page and apply it.&#034;</title>
+		<link>./../../2008/07/master-page-error-site-master-page.html</link>
+					<comments>./../../2008/07/master-page-error-site-master-page.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Tue, 22 Jul 2008 18:46:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<guid isPermaLink="false">/?p=622</guid>
+
+					<description><![CDATA[Ran across this one recently and was surprised by SharePoint&#8217;s behaviour. If you create your own custom master page and apply it to a parent Publishing site and have all your subsites set to inherit the custom master page, all will seem fine. Then if you create a new Team based subsite off of your Publishing parent site, you will notice that it does NOT inherit your custom master page and instead uses default.master. If you then go to the master page setting screen for the subsite you will see this message: &#8220;The site master page setting currently applied to…]]></description>
+										<content:encoded><![CDATA[<p>Ran across this one recently and was surprised by SharePoint&#8217;s behaviour. If you create your own custom master page and apply it to a parent Publishing site and have all your subsites set to inherit the custom master page, all will seem fine. Then if you create a new Team based subsite off of your Publishing parent site, you will notice that it does NOT inherit your custom master page and instead uses default.master. If you then go to the master page setting screen for the subsite you will see this message:</p>
+<p><span><span></p>
+<blockquote>
+<p align="left"><span>&#8220;The site master page setting currently applied to this site is invalid. Please select a new master page and apply<br />it.&#8221;</span></p>
+</blockquote>
+<p></span></p>
+<p align="left"><span>This is beyond frustrating if you have a site that needs many subsites with the same branding. Luckily you can manually correct the problem by creating all your subsites and THEN going back to the master page settings screen and set all the subsites to inherit the custom master page and click OK. This will set them all to your custom master.</span></p>
+<p><span></span><span>There is a KB on this topic located here:</span> <a href="http://support.microsoft.com/kb/936908/en-us">http://support.microsoft.com/kb/936908/en-us</a></span> </p>
+<p><span>Essentially this has to do with the Team sites not having publishing enabled, which is frustrating because you will run into this even if you aren&#8217;t using any publishing specific items in your master page. The only way they list for automatically correcting is by using Feature Stapling.</span><br /><span></span></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/master-page-error-site-master-page.html/feed/index.html</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Minimal Meeting Workspace Master Page</title>
+		<link>./../../2008/07/minimal-meeting-workspace-master-page.html</link>
+					<comments>./../../2008/07/minimal-meeting-workspace-master-page.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 10 Jul 2008 15:44:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=623</guid>
+
+					<description><![CDATA[I had to do some customization work with the Meeting Workspace today so I decided to pull my best Heather Solomon impersonation by releasing a &#8220;Minimal Meeting Workspace master page&#8221;. It is very much based on Heather&#8217;s minimal collaboration master page with my own twist on tabbing and comments, and of course the required pieces to work with the Meeting Workspace. This is very much an early alpha as its only been tested in my VM so far. So if you use it, please shoot me an email or comment (whether it worked or didn&#8217;t!). Grab my Minimal Meeting Workspace…]]></description>
+										<content:encoded><![CDATA[<p>I had to do some customization work with the Meeting Workspace today so I decided to pull my best Heather Solomon impersonation by releasing a &#8220;Minimal Meeting Workspace master page&#8221;. It is very much based on Heather&#8217;s minimal collaboration master page with my own twist on tabbing and comments, and of course the required pieces to work with the Meeting Workspace. This is very much an early alpha as its only been tested in my VM so far. So if you use it, please shoot me an email or comment (whether it worked or didn&#8217;t!).</p>
+<ul>
+<li><a href="http://www.drisgill.com/files/mossman/Mossman_Minimal_MeetingSpace.zip">Grab my Minimal Meeting Workspace master page</a></li>
+</ul>
+<p>FYI &#8211; Customizing the Meeting Workspace can be challenging, see both Heather and Eric Shupp&#8217;s articles on the topic, they cover all of the nasty details so why re-hash them here:</p>
+<ul>
+<li><a href="http://www.heathersolomon.com/blog/archive/2007/10/11/Meeting-Workspace-Master-Page-Woes.aspx">Meeting Workspace Master Page Woes &#8211; Heather Solomon</a></li>
+<li><a href="http://www.binarywave.com/blogs/eshupps/Lists/Posts/Post.aspx?ID=62">Creating a Custom Meeting Workspace Site Definition &#8211; Eric Shupps</a></li>
+</ul>
+<p>Also, if you aren&#8217;t familiar with Heather&#8217;s Minimal Master Pages, please read her FAQ on them as all of the same things apply to this master page:</p>
+<ul>
+<li><a href="http://www.heathersolomon.com/blog/articles/BaseMasterPages.aspx">Base Master Pages &#8211; Heather </a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/minimal-meeting-workspace-master-page.html/feed/index.html</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>New Article: Automated SharePoint Site Branding</title>
+		<link>./../../2008/07/new-article-automated-sharepoint-site.html</link>
+					<comments>./../../2008/07/new-article-automated-sharepoint-site.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Mon, 07 Jul 2008 14:26:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=625</guid>
+
+					<description><![CDATA[My good buddy Ted Pattison just published an article with the MSDN Magazine entitled &#8220;Automated SharePoint Site Branding&#8221;. He discusses many different ways to programmatically activate SharePoint branding such as master pages, images, alternate CSS and more. He even discusses switching out the application master pages as well. Automated SharePoint Site Branding]]></description>
+										<content:encoded><![CDATA[<p>My good buddy Ted Pattison just published an article with the MSDN Magazine entitled &#8220;Automated SharePoint Site Branding&#8221;. He discusses many different ways to programmatically activate SharePoint branding such as master pages, images, alternate CSS and more. He even discusses switching out the application master pages as well.</p>
+<p><a href="http://msdn.microsoft.com/en-us/magazine/cc700347.aspx">Automated SharePoint Site Branding</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/new-article-automated-sharepoint-site.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Common Theme Problem: &#034;Write Error on file _themes\&#034;</title>
+		<link>./../../2008/06/commong-them-problem-write-error-on.html</link>
+					<comments>./../../2008/06/commong-them-problem-write-error-on.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Fri, 13 Jun 2008 03:31:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=627</guid>
+
+					<description><![CDATA[When placing custom SharePoint themes into the 12 folder, sometimes you may run into this error when you try to select your new theme: &#8220;Write Error on file _themes\&#8220; Typically, this error happens when you are making changes to a theme and decide to make backups of some of your images by doing a simple file copy and paste. I&#8217;m not exactly sure what about this process causes the error, but simply moving the copied files to the desktop (or somewhere other then the theme folder) should correct the problem. Be sure to perform another IISRESET before re-selecting the theme.]]></description>
+										<content:encoded><![CDATA[<p>When placing custom SharePoint themes into the 12 folder, sometimes you may run into this error when you try to select your new theme:</p>
+<p><em><strong>&#8220;Write Error on file _themes\<new>&#8220;</new></strong></em></p>
+<p>Typically, this error happens when you are making changes to a theme and decide to make backups of some of your images by doing a simple file copy and paste. I&#8217;m not exactly sure what about this process causes the error, but simply moving the copied files to the desktop (or somewhere other then the theme folder) should correct the problem. Be sure to perform another IISRESET before re-selecting the theme.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/06/commong-them-problem-write-error-on.html/feed/index.html</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Favicon&#039;s in a SharePoint Master Page</title>
+		<link>./../../2008/02/favicons-in-sharepoint-master-page.html</link>
+					<comments>./../../2008/02/favicons-in-sharepoint-master-page.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sat, 01 Mar 2008 00:06:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[favicon]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=635</guid>
+
+					<description><![CDATA[My buddy John Ross had asked me if I knew anything about adding Favicons to SharePoint branding, so this post is for him. He pointed me to this post on MindSharp Blogs. This method didn&#8217;t work for him when he tried it so was wondering how I did one for a project we worked on. I think the method in that post technically should work as IIS will pickup favicons that are in your IIS root, but I think SharePoint may be blocking access in some instances. For me, in traditional html, I have always preferred to call out favicons…]]></description>
+										<content:encoded><![CDATA[<div>
+<p>My buddy John Ross had asked me if I knew anything about adding Favicons to SharePoint branding, so this post is for him. He pointed me to this post on <a href="http://mindsharpblogs.com/kathy/archive/2006/11/27/1384.aspx" target="_blank" rel="noopener">MindSharp Blogs</a>. This method didn&#8217;t work for him when he tried it so was wondering how I did one for a project we worked on. I think the method in that post technically should work as IIS will pickup favicons that are in your IIS root, but I think SharePoint may be blocking access in some instances. For me, in traditional html, I have always preferred to call out favicons specifically with a <link> tag in the html <head> this way I ensure that my code, not the server, is handling the file. So now, how do you do this in SharePoint? Here are my steps</p>
+<p>Drag a favicon.ico file to the Images directory of your MOSS site with SharePoint designer.</p>
+<ul type="disc">
+<li>I have created a simple favicon.ico for you to      try: <a href="http://209.208.125.75/~randy/images/favicon.ico" target="_blank" rel="noopener">Right Click and Save This Link</a>  <img decoding="async" loading="lazy" border="0" width="16" height="16" src="http://209.208.125.75/~randy/images/favicon.png" alt="">
+</p>
+</li>
+</ul>
+<p>Add the following line to your Master Page at the bottom of the head section right before the </head> tag:</p>
+<ul type="disc">
+<li><link rel="shortcut icon" href="/images/favicon.ico"      />
+</li>
+</ul>
+<p>Check-in, publish, and approve your Master Page so that anonymous folks can see the change.</p>
+<p>Refresh the site, and you should see the favicon.</p>
+<p>If you have problems seeing the icon, IE could be caching it, try Firefox and it should show eventually in IE.</p>
+<p><a href="http://en.wikipedia.org/wiki/Favicon" target="_blank" rel="noopener">More info on Favicons</a></p>
+<p><a href="http://www.make-a-favicon.com/favicon_FAQs.htm#Is_there_a_way_to_force_a_browser_to_recognize_my_favicon" target="_blank" rel="noopener">Info on clearing IE&#8217;s Favicon cache</a></p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/02/favicons-in-sharepoint-master-page.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Mossman&#039;s Weather Web Part</title>
+		<link>./../../2008/02/mossmans-weather-web-part.html</link>
+					<comments>./../../2008/02/mossmans-weather-web-part.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 27 Feb 2008 19:52:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<category><![CDATA[web part]]></category>
+		<guid isPermaLink="false">/?p=636</guid>
+
+					<description><![CDATA[I recently created a simple weather web part to enter into Iain Munro&#8217;s content editor web part contest. Actually, I created two, one using the US National Weather service feeds which don&#8217;t seem to have restrictions on usage, and one that worked with Yahoo weather which has some restrictions on for-profit usage. Iain wanted the Yahoo one because it supports other countries other than the US, but there seems to be some stability issues with the Yahoo Weather RSS feed, where sometimes it doesn&#8217;t send the full data (has anyone else experienced this?). So for now, I will just post…]]></description>
+										<content:encoded><![CDATA[<div>
+<p><span>I recently created a simple weather web part to enter into <a href="http://www.contenteditorwebpart.com/default.aspx" target="_blank" rel="noopener">Iain Munro&#8217;s content editor web part contest</a>. Actually, I created two, one using the US National Weather service feeds which don&#8217;t seem to have restrictions on usage, and one that worked with Yahoo weather which has some restrictions on for-profit usage. Iain wanted the Yahoo one because it supports other countries other than the US, but there seems to be some stability issues with the Yahoo Weather RSS feed, where sometimes it doesn&#8217;t send the full data (has anyone else experienced this?). So for now, I will just post the National Weather service one. To use it, add the web part to your page and to change the city listed, just modify the shared web part and edit the XML Link to reflect one of the XML URLs listed at this url: <a href="http://www.weather.gov/data/current_obs/seek.php?state=fl&#038;Find=Find">http://www.weather.gov/data/current_obs/seek.php?state=fl&#038;Find=Find</a></p>
+<p></span></p>
+<p><span>Download the Web Part here: <a href="http://209.208.125.75/~randy/moss/CurrentWeather_WebPart.zip">CurrentWeather_WebPart.zip</a></p>
+<p></span></p>
+<p><span><img decoding="async" src="http://209.208.125.75/~randy/moss/weather.jpg"></span><span></p>
+<p></span></p>
+<p><p> </p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/02/mossmans-weather-web-part.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Update to my SharePoint Name.dll ActiveX Fix</title>
+		<link>./../../2008/01/update-to-my-sharepoint-namedll-activex.html</link>
+					<comments>./../../2008/01/update-to-my-sharepoint-namedll-activex.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Tue, 29 Jan 2008 00:06:00 +0000</pubDate>
+				<category><![CDATA[activex]]></category>
+		<category><![CDATA[customization]]></category>
+		<category><![CDATA[name.dll]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=637</guid>
+
+					<description><![CDATA[Dave Ginn recently tried out my name.dll fix (read more about it in my previous post) and ran into a problem with some users not being able to access the Site Actions menu. Personally, I have deployed the code to several external MOSS sites and not run into the problem. Let me know in the comments if you have used my fix code successfully or not, as I&#8217;m trying to determine what sort of setup causes it to occur. Note: Dave fixed his problem with some code modifications and posted it to his site. I may end up rolling this…]]></description>
+										<content:encoded><![CDATA[<div>
+<p>Dave Ginn recently tried out my name.dll fix (<a href="http://themossman.blogspot.com/2007/09/fixing-namedll-activex-problem-mossman.html" target="_blank" rel="noopener">read more about it in my previous post</a>) and ran into a problem with some users not being able to access the Site Actions menu. Personally, I have deployed the code to several external MOSS sites and not run into the problem. Let me know in the comments if you have used my fix code successfully or not, as I&#8217;m trying to determine what sort of setup causes it to occur.</p>
+<p>Note: Dave fixed his problem with some code modifications and <a href="http://www.daveginn.com/post/2008/01/SharePoint-2007-Name-ActiveX-Control-in-IE7.aspx" target="_blank" rel="noopener">posted it to his site</a>. I may end up rolling this code back into my source here at this blog.</p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/01/update-to-my-sharepoint-namedll-activex.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

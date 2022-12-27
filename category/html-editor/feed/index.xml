@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>html editor &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Mon, 07 May 2007 22:52:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>How to Add a Button to the HTML Editor Control in SharePoint</title>
+		<link>./../../2007/05/how-to-add-button-to-html-editor.html</link>
+					<comments>./../../2007/05/how-to-add-button-to-html-editor.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Mon, 07 May 2007 22:52:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[html editor]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=651</guid>
+
+					<description><![CDATA[The HTML Editor Control (or rich text editor) in SharePoint 2007 is a pretty helpful addition to the product (assuming your users are using IE). If you would like to programmatically add your own buttons to the toolbar, you will most likely find only one or two articles from a Google search on the topic. Most links point to this page at the msdn: How to: Add a Button to the HTML Editor Field Control Unfortunately, I think this document is flawed in many ways. Because of this, the other day, I set out to actually get it working, and…]]></description>
+										<content:encoded><![CDATA[<p>The HTML Editor Control (or rich text editor) in SharePoint 2007 is a pretty helpful addition to the product (assuming your users are using IE). If you would like to programmatically add your own buttons to the toolbar, you will most likely find only one or two articles from a Google search on the topic. Most links point to this page at the msdn:</p>
+<p><a href="http://msdn2.microsoft.com/en-us/library/ms520217.aspx" target="_blank" rel="noopener">How to: Add a Button to the HTML Editor Field Control</a></p>
+<p>Unfortunately, I think this document is flawed in many ways. Because of this, the other day, I set out to actually get it working, and in the process I have simplified their example and have made it a bit more useful (hopefully). I&#8217;m not sure why their example is filled with syntax errors, contains unnecessary logic (example: always reading the second item in an array?!?!), and does not bother to reset the button to a usable state when they are done. Never the less, I think I have a basic understanding of how to use it. Note: I&#8217;m not guaranteeing this is the right way to do it, but it worked for me. Searching online and in the sdk for functions starting with RTE_ is pointless; Microsoft has left us out in the cold on this one.</p>
+<p>My example doesn&#8217;t do anything particularly useful, it just allows you to select a piece of text, click the newly created button, a javascript prompt appears asking for a url, and then whatever you type in that prompt is linkified in the html text area. Yes, I realize you can already make links in the out of the box control, but I had a specific need to bolt something extra onto a special link type&#8230; thus this customization was born.</p>
+<p>The first thing you need to do to add your own button, is to edit the RTE2ToolbarExtension.xml file with SharePoint Designer. The file is located at: </p>
+<blockquote>
+<p>&#8220;YOURSITE&#8221;/_catalogs/masterpages/Editing Menu/RTE2ToolbarExtension.xml</p>
+</blockquote>
+<p>Much like the example tries to do (though is missing the closing tag), mine simply contains:</p>
+<blockquote>
+<p><?xml version="1.0" encoding="utf-8" ?>      <br /><rte2ToolbarExtensions>       <br />     <rte2ToolbarExtraButton id="extraButtonTestId"       <br />        src=&#8221;RTE2ToolbarExtraButtonTest.js&#8221; mce_src=&#8221;RTE2ToolbarExtraButtonTest.js&#8221; />       <br /></rte2ToolbarExtensions></p>
+</blockquote>
+<p>This tells SharePoint to look for my own Javascript file called RTE2ToolbarExtraButtonTest.js which is located on the server at:</p>
+<p><em>C:\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\LAYOUTS\1033\RTE2ToolbarExtraButtonTest.js</em></p>
+<p>Since this file is on the server you will most likely need to remote to your SharePoint 2007 server to do any editing. </p>
+<p>I have included the source of my new button’s Javascript code below. Hopefully it’s commented well enough that I don’t need to write up a walkthrough. I would give more explanation of what’s going on inside of it, but like I said, I couldn&#8217;t find any documentation on the RTE_methods. When you save this file to the 1033 directory, you may need to cycle your web application pool before the changes are apparent (also, you may have to check in and publish your RTE2ToolbarExtension.xml file from SharePoint Designer). Once the files are created, simply go to your SharePoint site and Edit some page content with Internet Explorer. When you select some text, the rich text editor should appear and our new button will show. Clicking on the button will launch the javascript prompt and when you click Ok, it should linkify your selected text, and it should return the button state to clickable. See the attached screenshot:</p>
+<p><image gone, HD crash></p>
+<p> </p>
+<blockquote>
+<p><em>RTE2ToolbarExtraButtonTest.js</em></p>
+<p><em>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</em></p>
+<p><em></em></p>
+<p>//the function that is called on button click</p>
+<p>function TestButtonOnClick(strBaseElementID, arguments) {</p>
+<p>//get the document that is being edited</p>
+<p>var docEditor=RTE_GetEditorDocument(strBaseElementID);</p>
+<p>//if nothing is being edited quit</p>
+<p>if (docEditor==null) { return; }</p>
+<p>//get the selected text</p>
+<p>var selection=docEditor.selection;</p>
+<p>var rngSelection=selection.createRange();</p>
+<p>//pop open a simple javascript prompt</p>
+<p>var reply = prompt(&#8220;Please enter a valid URL:&#8221;, &#8220;&#8221;)</p>
+<p>//take the return of the prompt and set a link url to it and </p>
+<p>      //set the label of the link to the selected text</p>
+<p>//rngSelection is our selected text, and we are using the </p>
+<p>      //pasteHTML method to overwrite it with our link</p>
+<p>rngSelection.pasteHTML(&#8220;<a target='_blank' href='"+reply+"' rel="noopener">&#8220;+rngSelection.htmlText+&#8221;</a>&#8220;);</p>
+<p>//restore the button state (make it clickable again)</p>
+<p>RTE_RestoreSelection(strBaseElementID);</p>
+<p>return true;</p>
+<p>}</p>
+<p>// The function that is called when the button&#8217;s state is reset.</p>
+<p>function TestButtonOnResetState(strBaseElementID, arguments) {</p>
+<p>//get the document that is being edited</p>
+<p>var docEditor=RTE_GetEditorDocument(strBaseElementID);</p>
+<p>//if nothing is being edited quit</p>
+<p>if (docEditor==null) { return; }</p>
+<p>//actually enable the button</p>
+<p>// Parameters:</p>
+<p>// 1 &#8211; Pass in the ID of the actual editor (which </p>
+<p>            //     automatically is sent over on the reset call)</p>
+<p>// 2 &#8211; Boolean, True to turn it back on, False to </p>
+<p>            //     keep it off</p>
+<p>// 3 &#8211; The name of the button to turn on</p>
+<p>RTE_TB_SetEnabledFromCondition(strBaseElementID, true, &#8216;myCustomButton&#8217;);</p>
+<p>return true;</p>
+<p>}</p>
+<p>// Register the toolbar button, which is necessary for the button </p>
+<p>// to be displayed</p>
+<p>// Parameters:</p>
+<p>// 1 &#8211; What we want to call the button</p>
+<p>// 2 &#8211; A reference to a url for the button icon (I picked an </p>
+<p>//     existing one for simplicity)</p>
+<p>// 3 &#8211; What text we want to say next to the button</p>
+<p>// 4 &#8211; The tooltip for the button</p>
+<p>// 5 &#8211; The name of the function to call when it is clicked</p>
+<p>// 6 &#8211; The name of the function to call when the button is </p>
+<p>      //     reset (or done being clicked)</p>
+<p>RTE2_RegisterToolbarButton(&#8220;myCustomButton&#8221;, RTE_GetServerRelativeImageUrl(&#8220;rtelnk.gif&#8221;), &#8220;Custom Button&#8221;, &#8220;Custom Tooltip&#8221;, TestButtonOnClick, TestButtonOnResetState);</p>
+</blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2007/05/how-to-add-button-to-html-editor.html/feed/index.html</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

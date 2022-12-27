@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>favicon &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Sat, 01 Mar 2008 00:06:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Favicon&#039;s in a SharePoint Master Page</title>
+		<link>./../../2008/02/favicons-in-sharepoint-master-page.html</link>
+					<comments>./../../2008/02/favicons-in-sharepoint-master-page.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sat, 01 Mar 2008 00:06:00 +0000</pubDate>
+				<category><![CDATA[customization]]></category>
+		<category><![CDATA[favicon]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=635</guid>
+
+					<description><![CDATA[My buddy John Ross had asked me if I knew anything about adding Favicons to SharePoint branding, so this post is for him. He pointed me to this post on MindSharp Blogs. This method didn&#8217;t work for him when he tried it so was wondering how I did one for a project we worked on. I think the method in that post technically should work as IIS will pickup favicons that are in your IIS root, but I think SharePoint may be blocking access in some instances. For me, in traditional html, I have always preferred to call out favicons…]]></description>
+										<content:encoded><![CDATA[<div>
+<p>My buddy John Ross had asked me if I knew anything about adding Favicons to SharePoint branding, so this post is for him. He pointed me to this post on <a href="http://mindsharpblogs.com/kathy/archive/2006/11/27/1384.aspx" target="_blank" rel="noopener">MindSharp Blogs</a>. This method didn&#8217;t work for him when he tried it so was wondering how I did one for a project we worked on. I think the method in that post technically should work as IIS will pickup favicons that are in your IIS root, but I think SharePoint may be blocking access in some instances. For me, in traditional html, I have always preferred to call out favicons specifically with a <link> tag in the html <head> this way I ensure that my code, not the server, is handling the file. So now, how do you do this in SharePoint? Here are my steps</p>
+<p>Drag a favicon.ico file to the Images directory of your MOSS site with SharePoint designer.</p>
+<ul type="disc">
+<li>I have created a simple favicon.ico for you to      try: <a href="http://209.208.125.75/~randy/images/favicon.ico" target="_blank" rel="noopener">Right Click and Save This Link</a>  <img decoding="async" loading="lazy" border="0" width="16" height="16" src="http://209.208.125.75/~randy/images/favicon.png" alt="">
+</p>
+</li>
+</ul>
+<p>Add the following line to your Master Page at the bottom of the head section right before the </head> tag:</p>
+<ul type="disc">
+<li><link rel="shortcut icon" href="/images/favicon.ico"      />
+</li>
+</ul>
+<p>Check-in, publish, and approve your Master Page so that anonymous folks can see the change.</p>
+<p>Refresh the site, and you should see the favicon.</p>
+<p>If you have problems seeing the icon, IE could be caching it, try Firefox and it should show eventually in IE.</p>
+<p><a href="http://en.wikipedia.org/wiki/Favicon" target="_blank" rel="noopener">More info on Favicons</a></p>
+<p><a href="http://www.make-a-favicon.com/favicon_FAQs.htm#Is_there_a_way_to_force_a_browser_to_recognize_my_favicon" target="_blank" rel="noopener">Info on clearing IE&#8217;s Favicon cache</a></p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/02/favicons-in-sharepoint-master-page.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

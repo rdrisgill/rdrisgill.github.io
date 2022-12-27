@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./index.html</link>
+	<description></description>
+	<lastBuildDate>Sun, 08 Mar 2020 22:55:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>PowerShell: Create SharePoint Online pages from a template and add them to navigation</title>
+		<link>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html</link>
+					<comments>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sun, 08 Mar 2020 22:55:48 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1104</guid>
+
+					<description><![CDATA[I recently needed to rapidly build out a SharePoint Online Communication Site with a large number of similar pages to match a pre-defined product hierarchy. I could have manually created the pages but given the amount of time it would take and the repeatable nature of the activity I thought I would look into using PowerShell to loop through a CSV file and automatically create all the pages, give them the appropriate page title, publish the pages and add them to the Site navigation. The following post will walk you thru these steps: Create a Page Template in SharePoint Online…]]></description>
+										<content:encoded><![CDATA[<p>I recently needed to rapidly build out a SharePoint Online Communication Site with a large number of similar pages to match a pre-defined product hierarchy. I could have manually created the pages but given the amount of time it would take and the repeatable nature of the activity I thought I would look into using PowerShell to loop through a CSV file and automatically create all the pages, give them the appropriate page title, publish the pages and add them to the Site navigation.</p>
+<p>The following post will walk you thru these steps:</p>
+<ol>
+<li>Create a Page Template in SharePoint Online using the web interface</li>
+<li>Create CSV file with columns for FileName, PageTitle, and NavTitle</li>
+<li>Add the Patterns and Practices (PnP) PowerShell modules and load my SharePoint site in PowerShell</li>
+<li>Use PowerShell to loop over the CSV and…</li>
+<li>Save a new Page based on the FileName from CSV</li>
+<li>Set that Page’s Title to the PageTitle from CSV and Publish the Page</li>
+<li>Add the page to the site navigation using the NavTitle from CSV</li>
+</ol>
+<p>So, let’s walk through these steps:</p>
+<p><strong>1. Create Page Template</strong></p>
+<p>For what its worth you could use PnP PowerShell to create a page template from an existing page, but I’m a visual guy so I simply created a page template in a SharePoint Online Communications Site using the following information:</p>
+<p style="padding-left: 30px;"><a href="https://support.office.com/en-us/article/page-templates-in-sharepoint-online-faa92408-0c84-4e3d-8460-3c28065e7873">https://support.office.com/en-us/article/page-templates-in-sharepoint-online-faa92408-0c84-4e3d-8460-3c28065e7873</a></p>
+<p>For this example, I made a page that had some default text with page section and a selected web part and named the template Product Template. After creating the page template, you can see what file is created by navigating to <strong>Site contents &gt; Site Pages &gt; Templates</strong>. In my case the file that was created was called Product-Template.aspx.</p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1110" src="/wp-content/uploads/2020/03/page-template-page-1024x664.png" alt="page template page" width="1024" height="664" srcset="/wp-content/uploads/2020/03/page-template-page-1024x664.png 1024w, /wp-content/uploads/2020/03/page-template-page-300x194.png 300w, /wp-content/uploads/2020/03/page-template-page-768x498.png 768w, /wp-content/uploads/2020/03/page-template-page-1536x996.png 1536w, /wp-content/uploads/2020/03/page-template-page.png 1794w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1111" src="/wp-content/uploads/2020/03/page-template-1024x664.png" alt="page template" width="1024" height="664" srcset="/wp-content/uploads/2020/03/page-template-1024x664.png 1024w, /wp-content/uploads/2020/03/page-template-300x194.png 300w, /wp-content/uploads/2020/03/page-template-768x498.png 768w, /wp-content/uploads/2020/03/page-template-1536x996.png 1536w, /wp-content/uploads/2020/03/page-template.png 1794w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p><strong>2. Create the CSV File</strong></p>
+<p>In my case, I decided that I’d want to have slightly different navigation wording than the title on the page as well as the filename created in SharePoint. I created a CSV file named Products.csv with the following format:</p>
+<pre>NavTitle,PageTitle,FileName
+Shirts,Products - Shirts,product-shirts
+Shoes,Products - Shoes,product-shoes
+Pants,Products - Pants,product-pants
+Hats,Products - Hats,product-hats
+Socks,Products - Socks,product-socks
+Watches,Products - Watches,product-watches</pre>
+<p><strong>3. Add the Patterns and Practices (PnP) PowerShell modules and load the SharePoint site in PowerShell</strong></p>
+<p>I always open Windows PowerShell by right-clicking on it and Running as Administrator. Once open, run this line to install the PnP PowerShell:</p>
+<pre>Install-Module SharePointPnPPowerShellOnline</pre>
+<p>If you already have PnP installed and it has been a while you should update it with:</p>
+<pre>Update-Module SharePointPnPPowerShell*</pre>
+<p>Lastly, connect to your SharePoint site (an authentication prompt pop up):</p>
+<pre>Connect-PnPOnline -Url "https://mytenant.sharepoint.com/sites/SiteName"</pre>
+<p><strong>Steps 4 – 7</strong></p>
+<p>For the rest of the steps you can read the comments in the following PowerShell which you can paste and run directly in PowerShell. Be sure to update this code to reflect the correct location of your CSV file and your actual SharePoint Site name:</p>
+<pre># load the CSV file into a variable for looping
+$CSV = import-csv -Path 'C:\Users\RD\Desktop\Products.csv'
+
+# set the path to my SharePoint sites Site Pages folder
+$sitePath = '/sites/SiteName/SitePages/'
+
+# load the page template we created earlier
+$template = Get-PnPClientSidePage -Identity "Templates/Product-Template"
+
+# loop over all the rows in the CSV file
+foreach ($row in $CSV) {
+
+   # set the full file name from the FileTitle in the CSV and add .aspx
+   $fullFileName = $row.FileName + '.aspx'
+
+   # create a variable for the full path to the file
+   $fileURL = $sitePath + $fullFileName
+
+   # save a new SharePoint Page based on the Page Template we loaded earlier
+   $template.Save($fullFileName)
+
+   # run Set-PnPClientSidePage using the identity of the file we just saved to set the title and
+   # publish the page which is required before creating a navigation node
+   Set-PnPClientSidePage -Identity $fullFileName -Title $row.PageTitle -Publish
+
+   # add the page to the QuickLaunch navigation which is at the top of Communication sites
+   $nav = Add-PnPNavigationNode -Title $row.NavTitle -Url $fileURL -Location "QuickLaunch"
+}</pre>
+<p>Once you run that in PowerShell it will take a bit to loop thru all the rows in the CSV and for each row if it worked successfully you will see output like the following:</p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1112" src="/wp-content/uploads/2020/03/powershell-1024x956.png" alt="powershell" width="1024" height="956" srcset="/wp-content/uploads/2020/03/powershell-1024x956.png 1024w, /wp-content/uploads/2020/03/powershell-300x280.png 300w, /wp-content/uploads/2020/03/powershell-768x717.png 768w, /wp-content/uploads/2020/03/powershell.png 1228w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Now when you reload your SharePoint site, you should see multiple page created in the Site Pages folder as well as each page being added to the top navigation:</p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1109" src="/wp-content/uploads/2020/03/finished-1024x664.png" alt="finished" width="1024" height="664" srcset="/wp-content/uploads/2020/03/finished-1024x664.png 1024w, /wp-content/uploads/2020/03/finished-300x194.png 300w, /wp-content/uploads/2020/03/finished-768x498.png 768w, /wp-content/uploads/2020/03/finished-1536x996.png 1536w, /wp-content/uploads/2020/03/finished.png 1794w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1113" src="/wp-content/uploads/2020/03/site-contents-1024x664.png" alt="site contents" width="1024" height="664" srcset="/wp-content/uploads/2020/03/site-contents-1024x664.png 1024w, /wp-content/uploads/2020/03/site-contents-300x194.png 300w, /wp-content/uploads/2020/03/site-contents-768x498.png 768w, /wp-content/uploads/2020/03/site-contents-1536x996.png 1536w, /wp-content/uploads/2020/03/site-contents.png 1794w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ignite Live Blog: THR2070 &#8211; Ten Microsoft Teams tips in twenty minutes</title>
+		<link>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html</link>
+					<comments>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Tue, 12 Nov 2019 18:49:14 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1100</guid>
+
+					<description><![CDATA[Last week at Ignite I sat in on Adam Deltinger&#8217;s session where he packed in over ten amazing Teams tips in less than 20 minutes. Adam wasted no time jumping right into the content and really showed me some great ideas to try in my Teams tenant. Check out the post on Microsoft&#8217;s Tech Community website: https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty/ba-p/1002307]]></description>
+										<content:encoded><![CDATA[<p>Last week at Ignite I sat in on Adam Deltinger&#8217;s session where he packed in over ten amazing Teams tips in less than 20 minutes. Adam wasted no time jumping right into the content and really showed me some great ideas to try in my Teams tenant.</p>
+<p>Check out the post on Microsoft&#8217;s Tech Community website:</p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty/ba-p/1002307">https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty/ba-p/1002307</a></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1102" src="/wp-content/uploads/2020/03/ignite-2.jpg" alt="ignite 2" width="999" height="749" srcset="/wp-content/uploads/2020/03/ignite-2.jpg 999w, /wp-content/uploads/2020/03/ignite-2-300x225.jpg 300w, /wp-content/uploads/2020/03/ignite-2-768x576.jpg 768w" sizes="(max-width: 999px) 100vw, 999px" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Ignite Live Blog: THR1079 &#8211; Streamline Business Processes w/Microsoft Teams &#038; Power Apps</title>
+		<link>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html</link>
+					<comments>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 06 Nov 2019 18:43:34 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1097</guid>
+
+					<description><![CDATA[Yesterday at Ignite I attended an awesome session delivered by Matthew Bolanos and Pete Daderko where they reviewed some cool new ways you can rapidly create apps in PowerApps and publish them to Teams for your organization to start using. Check out the blog post on Microsoft&#8217;s Tech Community website: https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr1079-streamline-business-processes-w/ba-p/990003]]></description>
+										<content:encoded><![CDATA[<p>Yesterday at Ignite I attended an awesome session delivered by Matthew Bolanos and Pete Daderko where they reviewed some cool new ways you can rapidly create apps in PowerApps and publish them to Teams for your organization to start using.</p>
+<p>Check out the blog post on Microsoft&#8217;s Tech Community website:</p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr1079-streamline-business-processes-w/ba-p/990003">https://techcommunity.microsoft.com/t5/microsoft-teams-events-blog/ignite-live-blog-thr1079-streamline-business-processes-w/ba-p/990003</a></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1098" src="/wp-content/uploads/2020/03/ignite-1.jpeg" alt="ignite 1" width="999" height="749" srcset="/wp-content/uploads/2020/03/ignite-1.jpeg 999w, /wp-content/uploads/2020/03/ignite-1-300x225.jpeg 300w, /wp-content/uploads/2020/03/ignite-1-768x576.jpeg 768w" sizes="(max-width: 999px) 100vw, 999px" /></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Parallel Approvals using Microsoft Flow, Forms &#038; SharePoint</title>
+		<link>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
+					<comments>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sun, 31 Mar 2019 20:31:19 +0000</pubDate>
+				<category><![CDATA[Flow]]></category>
+		<category><![CDATA[Forms]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1074</guid>
+
+					<description><![CDATA[I think one of the most common needs in any business is to create a simple approval workflow for more than one person to approve or deny a request. Office 365 has many simple to use tools that can be combined to create a user-friendly solution to this problem. Microsoft Forms can be used to quickly create a form that anyone in your organization can fill out, then a Flow can be created to pick up the responses, write them to a SharePoint list, and then send approval emails to multiple people to approve / or deny the request. Flow…]]></description>
+										<content:encoded><![CDATA[<p>I think one of the most common needs in any business is to create a simple approval workflow for more than one person to approve or deny a request. Office 365 has many simple to use tools that can be combined to create a user-friendly solution to this problem. Microsoft Forms can be used to quickly create a form that anyone in your organization can fill out, then a Flow can be created to pick up the responses, write them to a SharePoint list, and then send approval emails to multiple people to approve / or deny the request. Flow can then update the SharePoint list with the results as well as emailing back the original Form submitter with the result.</p>
+<p>To create something like this its best to start with the Form and the SharePoint list. If you can get both of these right before starting your Flow, it makes picking options in Flow much easier. Here is a simple Form I created with just two fields for this example:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1082 size-large" src="/wp-content/uploads/2019/03/form-1-1024x906.png" alt="form" width="1024" height="906" srcset="/wp-content/uploads/2019/03/form-1-1024x906.png 1024w, /wp-content/uploads/2019/03/form-1-300x265.png 300w, /wp-content/uploads/2019/03/form-1-768x679.png 768w, /wp-content/uploads/2019/03/form-1.png 1413w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Once you have your Form created, you can create a SharePoint List to receive the selections as well as columns to collect the approvals and reasons from each approver (for this demo I have Randy and Rachel doing approvals). For my list I have these columns:</p>
+<ul>
+<li>Title – Will holds the request text box entry</li>
+<li>Selected Option – Will holds the radio button entry</li>
+<li>Rachel Approval &amp; Randy Approval – Each column holds the Approve or Reject from the Flow</li>
+<li>Rachel Reason &amp; Randy Reason – Each column holds the Approval comment from each approver</li>
+</ul>
+<p>I’ve found that it’s best to make all these columns either Single Line of Text or Multiple Lines of Text. These column types help make the Flow creation and operation go smoother. Here is a screenshot of my list:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1079 size-large" src="/wp-content/uploads/2019/03/List-1024x103.png" alt="List" width="1024" height="103" srcset="/wp-content/uploads/2019/03/List-1024x103.png 1024w, /wp-content/uploads/2019/03/List-300x30.png 300w, /wp-content/uploads/2019/03/List-768x77.png 768w, /wp-content/uploads/2019/03/List-1536x155.png 1536w, /wp-content/uploads/2019/03/List.png 1878w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Next, to start creating my Flow, I opened Flow and used Create From Template, searched on “Forms” and picked the “Record form responses in SharePoint”:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1084 size-large" src="/wp-content/uploads/2019/03/template-1024x767.png" alt="template" width="1024" height="767" srcset="/wp-content/uploads/2019/03/template-1024x767.png 1024w, /wp-content/uploads/2019/03/template-300x225.png 300w, /wp-content/uploads/2019/03/template-768x575.png 768w, /wp-content/uploads/2019/03/template.png 1284w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>You may have to authenticate into each Flow connector at the next step, but after that the shell of a Flow will be created:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1085 size-large" src="/wp-content/uploads/2019/03/template-flow-1009x1024.png" alt="template flow" width="1009" height="1024" srcset="/wp-content/uploads/2019/03/template-flow-1009x1024.png 1009w, /wp-content/uploads/2019/03/template-flow-296x300.png 296w, /wp-content/uploads/2019/03/template-flow-768x779.png 768w, /wp-content/uploads/2019/03/template-flow.png 1283w" sizes="(max-width: 1009px) 100vw, 1009px" /></p>
+<p>From there it’s a matter of filling out the Flow options to match your Form, SharePoint site, SharePoint list, and then picking Form fields to put into the SharePoint list columns:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1088 size-large" src="/wp-content/uploads/2019/03/step-1-flow-625x1024.png" alt="step 1 flow" width="625" height="1024" srcset="/wp-content/uploads/2019/03/step-1-flow-625x1024.png 625w, /wp-content/uploads/2019/03/step-1-flow-183x300.png 183w, /wp-content/uploads/2019/03/step-1-flow-768x1259.png 768w, /wp-content/uploads/2019/03/step-1-flow-937x1536.png 937w, /wp-content/uploads/2019/03/step-1-flow.png 1011w" sizes="(max-width: 625px) 100vw, 625px" /></p>
+<p>Step 1: Select your Form from the drop down</p>
+<p>Step 2: Leave “List of responses” alone you will need that for the Flow to work</p>
+<p>Step 3: Select your Form again (silly.. I know) and then leave the Response id with the default settings.</p>
+<p>Step 4: Select your SharePoint site from the sites that you have access to. Then select a list from this site (therefore it’s best to have started by creating your list). After you select the list, all the available columns will flow out underneath it. Since we are just collecting Form entries right now, we can just drag Form fields into the Title and Selected Option columns.</p>
+<p>For my Form I picked “What is your request” and “Pick an option”. The next screenshot shows how you select fields from your Form:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1089 size-large" src="/wp-content/uploads/2019/03/field-picker-1024x571.png" alt="field picker" width="1024" height="571" srcset="/wp-content/uploads/2019/03/field-picker-1024x571.png 1024w, /wp-content/uploads/2019/03/field-picker-300x167.png 300w, /wp-content/uploads/2019/03/field-picker-768x428.png 768w, /wp-content/uploads/2019/03/field-picker.png 1286w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>If all went as planned, you should be able to Save and Test your Flow now. When you submit your Form, it will kickoff the Flow and add a row to you SharePoint list. If you get errors, Flow will try to show you what you need to fix. If you run into any problems with Form fields, SharePoint lists, or list columns not showing correct in Flow, try closing the Flow a re-editing it. Sometimes Flow can be a pain about this.</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1091 size-full" src="/wp-content/uploads/2019/03/test.png" alt="test" width="420" height="276" srcset="/wp-content/uploads/2019/03/test.png 420w, /wp-content/uploads/2019/03/test-300x197.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1092" src="/wp-content/uploads/2019/03/test-result-1024x666.png" alt="test result" width="1024" height="666" srcset="/wp-content/uploads/2019/03/test-result-1024x666.png 1024w, /wp-content/uploads/2019/03/test-result-300x195.png 300w, /wp-content/uploads/2019/03/test-result-768x499.png 768w, /wp-content/uploads/2019/03/test-result.png 1029w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>In the next part, we will need to add in the Parallel Approval steps, record those answers back to SharePoint, and then if both answers are Approved, we can send back an approval email or if not, a rejection email. For those that are impatient and want to try this on their own, I’ve included a screenshot of the final Flow (click to enlarge):</p>
+<p><a href="/wp-content/uploads/2019/03/entire-flow.png"><img decoding="async" loading="lazy" class="alignnone wp-image-1076 size-large" src="/wp-content/uploads/2019/03/entire-flow-506x1024.png" alt="entire flow" width="506" height="1024" srcset="/wp-content/uploads/2019/03/entire-flow-506x1024.png 506w, /wp-content/uploads/2019/03/entire-flow-148x300.png 148w, /wp-content/uploads/2019/03/entire-flow-768x1554.png 768w, /wp-content/uploads/2019/03/entire-flow-759x1536.png 759w, /wp-content/uploads/2019/03/entire-flow-1012x2048.png 1012w" sizes="(max-width: 506px) 100vw, 506px" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Starter Master Pages moved from Codeplex to Github</title>
+		<link>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html</link>
+					<comments>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sun, 25 Feb 2018 18:58:48 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1071</guid>
+
+					<description><![CDATA[Since my old code is getting hard to find on Codeplex now that it is read only, I have moved all of my starter master pages to Github: https://github.com/rdrisgill]]></description>
+										<content:encoded><![CDATA[<p>Since my old code is getting hard to find on Codeplex now that it is read only, I have moved all of my starter master pages to Github:</p>
+<p><a href="https://github.com/rdrisgill?utf8=%E2%9C%93&amp;tab=repositories&amp;q=starter">https://github.com/rdrisgill</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Video: State of Comms Sites &#038; UI Customization in SP Online</title>
+		<link>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html</link>
+					<comments>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Mon, 15 Jan 2018 22:07:08 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1059</guid>
+
+					<description><![CDATA[The good folks over at Collab365 have allowed me to post the video from my recent session, ‘The State of Communication Sites &#38; UI Customization in SharePoint Online’ from November 2017. Here is a brief description: As Microsoft has recently rolled out the new modern communication sites to First Release tenants as well as the SharePoint Framework (SPFx), we are starting to see the future of what custom intranet portals could become. These features are a great start for modern intranets, but we are still very early in their maturity. In this session we will discuss the realities of the current…]]></description>
+										<content:encoded><![CDATA[<p>The good folks over at Collab365 have allowed me to post the video from my recent session, ‘The State of Communication Sites &amp; UI Customization in SharePoint Online’ from November 2017.</p>
+<p>Here is a brief description:</p>
+<blockquote><p>As Microsoft has recently rolled out the new modern communication sites to First Release tenants as well as the SharePoint Framework (SPFx), we are starting to see the future of what custom intranet portals could become. These features are a great start for modern intranets, but we are still very early in their maturity. In this session we will discuss the realities of the current state of communication sites and what options you can expect for creating custom UI now and in the near future.</p></blockquote>
+<p><iframe loading="lazy" src="https://player.vimeo.com/video/236327939?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>#c365global17drisgill_session from <a href="https://vimeo.com/user12783938">Mark Jones</a> on <a href="https://vimeo.com/">Vimeo</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Watch my virtual session: State of Comms Sites &#038; UI Customization in SP Online</title>
+		<link>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html</link>
+					<comments>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Fri, 20 Oct 2017 18:53:23 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1052</guid>
+
+					<description><![CDATA[Join me and 120 other speakers from around the world who will be bringing you the very latest content around SharePoint, Office 365, Flow, PowerApps, Azure, OneDrive for Business and of course the increasingly popular Microsoft Teams. The event is produced by the Collab365 Community and is entirely free to attend. Places are limited to 5000 so be quick and register now. During the conference I&#8217;d love you to watch my session which is called : &#8216;The State of Communication Sites &#38; UI Customization in SharePoint Online&#8217; As Microsoft has recently rolled out the new modern communication sites to First Release tenants as well as the…]]></description>
+										<content:encoded><![CDATA[<p>Join me and <a href="https://events.collab365.community/collab365-global-conference-2017/agenda/">120 other speakers</a> from around the world who will be bringing you the very latest content around SharePoint, Office 365, Flow, PowerApps, Azure, OneDrive for Business and of course the increasingly popular Microsoft Teams. The event is produced by the <a href="https://collab365.community/">Collab365 Community</a> and is entirely free to attend.</p>
+<p>Places are limited to 5000 so be quick and <a href="https://events.collab365.community/collab365-global-conference-2017/">register now</a>.</p>
+<p>During the conference I&#8217;d love you to watch my session which is called : <strong>&#8216;The State of Communication Sites &amp; UI Customization in SharePoint Online&#8217;</strong></p>
+<p>As Microsoft has recently rolled out the new modern communication sites to First Release tenants as well as the SharePoint Framework (SPFx), we are starting to see the future of what custom intranet portals could become. These features are a great start for modern intranets, but we are still very early in their maturity. In this session we will discuss the realities of the current state of communication sites and what options you can expect for creating custom UI now and in the near future.</p>
+<p>During the session we will look at replicating the following design in a SharePoint Online communications site including the custom header and footer:</p>
+<p><img decoding="async" loading="lazy" class="wp-image-1054 size-large alignnone" src="/wp-content/uploads/2017/10/Final-Waffles-556x1024.png" alt="Final Waffles" width="556" height="1024" srcset="/wp-content/uploads/2017/10/Final-Waffles-556x1024.png 556w, /wp-content/uploads/2017/10/Final-Waffles-163x300.png 163w, /wp-content/uploads/2017/10/Final-Waffles-768x1415.png 768w, /wp-content/uploads/2017/10/Final-Waffles-834x1536.png 834w, /wp-content/uploads/2017/10/Final-Waffles-1112x2048.png 1112w, /wp-content/uploads/2017/10/Final-Waffles.png 1308w" sizes="(max-width: 556px) 100vw, 556px" /></p>
+<p><strong>Time :</strong></p>
+<ul>
+<li>Thursday, November 2 2017 10:00 PM Eastern</li>
+</ul>
+<p><strong>How to attend :</strong></p>
+<ol>
+<li>Register <a href="https://events.collab365.community/collab365-global-conference-2017/">here</a>.</li>
+<li>At the time listed above go <a href="http://c365.io/c365global17drisgill">here</a> to watch my session. (you can also add me to your own personal planner from the agenda.</li>
+<li>Be ready to take notes!</li>
+</ol>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Getting Started Video &#8211; SharePoint Framework (SPFx) Development</title>
+		<link>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html</link>
+					<comments>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2016 20:01:54 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1047</guid>
+
+					<description><![CDATA[For the Collab365 Global Conference I did a session on getting started with client side development in the new SharePoint Framework or SPFx. The conference posted the video of the session to Youtube so I figured I&#8217;d share it here on my blog for anyone that is getting started with the SPFx Framework. The video just barely scratches the surface of the topic, but I think it does a good job of introducing you to the tools and concepts needed to get started making a hello world Web Part using the SPFx Framework. My intention was to walk you through…]]></description>
+										<content:encoded><![CDATA[<p>For the Collab365 Global Conference I did a session on getting started with client side development in the new SharePoint Framework or SPFx. The conference posted the video of the session to Youtube so I figured I&#8217;d share it here on my blog for anyone that is getting started with the SPFx Framework.</p>
+<p>The video just barely scratches the surface of the topic, but I think it does a good job of introducing you to the tools and concepts needed to get started making a hello world Web Part using the SPFx Framework. My intention was to walk you through Microsoft&#8217;s example, explaining everything along the way with the assumption that you have may only a basic understanding of traditional JavaScript development. Hopefully you find the video useful.. if so, let me know!</p>
+<p>https://youtube.com/watch?v=b_1jM3vkCZw</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html/feed/index.html</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>My Post-Ignite 2016 Report – The State of SharePoint and Office 365</title>
+		<link>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html</link>
+					<comments>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 13 Oct 2016 19:45:10 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1038</guid>
+
+					<description><![CDATA[A couple weeks ago Microsoft had their big Ignite 2016 Conference in Atlanta and I was fortunate to be able to attend with Rackspace. I’ll blame a pesky little hurricane for the delay in me getting my thoughts out on the event until now. That being said, I feel like the conference delivered on many of the promises that Microsoft made at the Future of SharePoint event from May 4th, 2016. The May event was really Microsoft’s coming out party for the rebirth of SharePoint, effectively bringing it back from being largely ignored. While much of Ignite 2016 was focused…]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" class="alignnone wp-image-1041 size-large" src="/wp-content/uploads/2016/10/ignite-1-1024x512.png" alt="ignite-1" width="1024" height="512" /></p>
+<p>A couple weeks ago Microsoft had their big Ignite 2016 Conference in Atlanta and I was fortunate to be able to attend with Rackspace. I’ll blame a pesky little <a href="https://weather.com/storms/hurricane/news/hurricane-matthew-bahamas-florida-georgia-carolinas-forecast">hurricane</a> for the delay in me getting my thoughts out on the event until now. That being said, I feel like the conference delivered on many of the promises that Microsoft made at the <a href="http://blog.drisgill.com/2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html">Future of SharePoint</a> event from May 4<sup>th</sup>, 2016. The May event was really Microsoft’s coming out party for the rebirth of SharePoint, effectively bringing it back from being largely ignored. While much of Ignite 2016 was focused on Office 365 (and Azure of course) it was pleasing to see that SharePoint was a topic that was on a lot of peoples lips including Microsoft’s. Unlike the previous Ignite conference where everyone was asking “Is SharePoint dead?”, I heard over and over again “SharePoint is back!”.</p>
+<p>Beyond this, while attending Ignite and watching videos after, a lightbulb started to turn on in my head. It’s clear that a lot of the stuff Microsoft was talking about in the Future of SharePoint event is starting to show up in SharePoint Online in Office 365, but what I hadn’t realized at that time was how many of the other Office 365 updates would start to compliment SharePoint. All of these new features are starting to work together and I feel like Office 365 is starting to evolve into the next generation’s collaboration toolset… one that relies on SharePoint as its team collaboration piece.</p>
+<p>Given the evergreen state of Office 365 and the way features push out at different times across the various tenants (even all First Release tenants don’t get everything at the same time), it’s been difficult to see the benefits of all the new features Microsoft has been working on this year as they all relate to each other. Instead I’ve just been seeing updates as one new feature and then another new feature separately… but at Ignite 2016 it all started to click in my mind. There is a method to Microsoft’s madness, and that method is leading to a reinvention of team collaboration across all of Office 365 through many different features that are starting to gel together like so:</p>
+<blockquote><p><strong>SharePoint</strong> is where you do team collaboration – work together, publish info, share files, etc. for your team. Modern experiences with easy to use / great looking UI’s are coming online for almost every major aspect of what we know as SP today.</p>
+<p><strong>OneDrive</strong> is becoming your Explorer.exe view of all the docs your team is working on throughout Office 365 and you can sync to your desktop (cross-platform) as needed.</p>
+<p><strong>Groups</strong> is how you will rapidly organize and manage your internal and external team members and how they work together across Office 365 as well as replacing your email distribution lists.</p>
+<p><strong>Delve</strong> is providing searching as well as intelligent surfacing of information in Office 365 that matters to you. Soon to provide rich “card” views of people and groups across Office 365.</p>
+<p><strong>PowerApps &amp; Flow</strong> are providing easy creation of business apps and workflows in Office 365 and even SharePoint.</p>
+<p><strong>SharePoint Framework</strong> is the client side coding model that Microsoft is using to make all these great modern experiences and you can even use the same framework to make your own client side solutions for SharePoint.</p>
+<p><strong>Mobile</strong> &#8211; Native SharePoint and OneDrive apps have been released for the two major phone platforms.</p>
+<p><strong>SharePoint Server 2016</strong> is the on-prem story that you can have more flexibility and control over but can be connected through hybrid to SharePoint Online, OneDrive, Delve, etc.</p></blockquote>
+<p>When you consider how all these features work together, Office 365 and SharePoint starts to become a pretty compelling platform to run teams on.</p>
+<p>So what features were discussed at Ignite 2016? A LOT OF STUFF. Some of these things released before Ignite, and some are still pending, but when you start counting features, there’s a good bit to talk about. Here is my best attempt at remembering all the interesting things:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1043 size-large" src="/wp-content/uploads/2016/10/SharePoint-innovations-further-advance-intelligence-and-collaboration-in-Office-365-3-1024x472.png" alt="sharepoint-innovations-further-advance-intelligence-and-collaboration-in-office-365-3" width="1024" height="472" srcset="/wp-content/uploads/2016/10/SharePoint-innovations-further-advance-intelligence-and-collaboration-in-Office-365-3-1024x472.png 1024w, /wp-content/uploads/2016/10/SharePoint-innovations-further-advance-intelligence-and-collaboration-in-Office-365-3-300x138.png 300w, /wp-content/uploads/2016/10/SharePoint-innovations-further-advance-intelligence-and-collaboration-in-Office-365-3-768x354.png 768w, /wp-content/uploads/2016/10/SharePoint-innovations-further-advance-intelligence-and-collaboration-in-Office-365-3.png 1239w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p><strong><a href="https://blogs.office.com/2016/09/26/sharepoint-innovations-further-advance-intelligence-and-collaboration-in-office-365/">SharePoint Online</a></strong></p>
+<ul>
+<li>Team sites got a big push in 2016 and Publishing sites will start getting attention in 2017</li>
+<li>SharePoint back in the App Launcher &#8211; pointing to Sites page</li>
+<li>Native mobile app released earlier this year for iOS and now Android</li>
+<li>Modern Lists, Modern Document Libraries, Modern Site Contents all either released or coming soon to SharePoint Online</li>
+<li>Modern Pages &#8211; Publishing style pages, released to most tenants</li>
+<li>Modern Team sites in progress
+<ul>
+<li>Create a Team Site and it creates a Group</li>
+<li>SharePoint Team Site homepage updates</li>
+<li>At the top level of modern team sites there will be News</li>
+<li>News will highlight team activities and announcements</li>
+</ul>
+</li>
+<li>Modern Publishing Sites coming next year</li>
+</ul>
+<p><strong><a href="https://blogs.office.com/2016/09/26/sharepoint-online-sync-preview-headlines-ignite-announcements-for-onedrive/">OneDrive</a></strong></p>
+<ul>
+<li>Next Gen sync client &#8211; Cross platform</li>
+<li>Sync SP Team Sites to your computer</li>
+<li>Personal and team files in one experience</li>
+</ul>
+<p><strong><a href="https://blogs.office.com/2016/10/12/office-365-groups-update-at-ignite-2016/">Groups</a></strong></p>
+<ul>
+<li>Every Group gets created with a SharePoint Site Collection with a Team Site</li>
+<li>You&#8217;ll be able to view all group files and documents, whether they are attachments or documents, in one place</li>
+</ul>
+<p><strong>Delve / Office Graph API</strong></p>
+<ul>
+<li>Delve Profiles for a rich view of your team members contact info and org charts</li>
+<li>People Cards giving a quick view into Delve Profile from all of Office 365</li>
+<li>Office Graph API enhancements for SharePoint</li>
+</ul>
+<p><strong><a href="https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/">PowerApps &amp; Flow</a></strong></p>
+<ul>
+<li>Easily create simple business apps and workflows that interact with SharePoint</li>
+</ul>
+<p><strong><a href="http://dev.office.com/blogs/sharepoint-framework-developer-preview-release">SharePoint Framework (SPFx)</a></strong></p>
+<ul>
+<li>The next generation of developing client side code for SharePoint is already out in developer preview, wider release Q4 2016</li>
+<li>Microsoft is using it to build a lot of these new modern experiences in SharePoint</li>
+<li>Modern Web Parts are being created for use in Modern Pages in SharePoint</li>
+<li>Framework is slated to make its way back to SharePoint 2016 On-Prem which could open the door for even more new modern features for SharePoint 2016</li>
+</ul>
+<p><strong><a href="https://blogs.office.com/2016/09/26/announcing-feature-pack-1-for-sharepoint-server-2016-cloud-born-and-future-proof/">SharePoint 2016 On-Premises</a></strong></p>
+<ul>
+<li>Feature Pack 1 announced for this year, which will be the first drop of new features added to SharePoint 2016</li>
+<li>Feature Pack 2 slated for 2017</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>SharePoint 2016: Home of Your New Intelligent Intranet</title>
+		<link>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html</link>
+					<comments>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 04 May 2016 18:33:17 +0000</pubDate>
+				<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=1028</guid>
+
+					<description><![CDATA[Note: The following blog post comes from my original post on the Rackspace blog: Released today, SharePoint 2016 is a foundational release from Microsoft that builds on the success of its cloud based Office 365 offering, extending that power into on-premises dedicated SharePoint farms. This is the first version of SharePoint to be created by Microsoft with a “cloud first” mentality meaning that it shares a common codebase with Microsoft’s Office 365 SharePoint Online product. Many of the new SharePoint features showcased today will be in Office 365’s SharePoint Online product, where they can be tested at massive scale to…]]></description>
+										<content:encoded><![CDATA[<p><strong>Note: The following blog post comes from my original post on the <a href="http://blog.rackspace.com/sharepoint-2016-new-intelligent-intranet">Rackspace blog</a>:</strong></p>
+<p>Released today, SharePoint 2016 is a foundational release from Microsoft that builds on the success of its cloud based Office 365 offering, extending that power into on-premises dedicated SharePoint farms.</p>
+<p>This is the first version of SharePoint to be created by Microsoft with a “cloud first” mentality meaning that it shares a common codebase with Microsoft’s Office 365 SharePoint Online product.</p>
+<p>Many of the new SharePoint features showcased today will be in Office 365’s SharePoint Online product, where they can be tested at massive scale to First Release tenants. As those features are proven out online, Microsoft will work to bring certain of those features back to on-premises SharePoint as incremental feature packs that can be turned on or off by on-premises SharePoint administrators.</p>
+<p>This new update method ensures on-premises SharePoint will continue to evolve at a much quicker pace than the previous three-year update cycle Microsoft had for SharePoint.</p>
+<p>Thanks to our strong relationship with Microsoft, the Rackspace SharePoint MVPs were invited to attend the launch event in person, allowing us to bring you updates directly from the keynote floor.</p>
+<p><strong>SharePoint Home</strong></p>
+<p>As a longtime SharePoint professional, I found one of the biggest small pieces of news to be Microsoft’s renaming the “Sites” tile and feature in Office 365 back to “SharePoint” and introducing a new concept of the SharePoint home.</p>
+<p>This includes a new card-based, modern user interface as well as the inclusion of enhancements based on the Office Graph technology, to show recommended links as well as recently active documents from your SharePoint site. Users will also have the ability to rapidly create new sites that immediately provision an Office 365 Group membership tied to the SharePoint Team site. Going forward, Office 365 Groups are no longer on an island, they are now integrated with SharePoint sites to make a seamless experience for team membership and document storage.</p>
+<figure id="attachment_40541"><img decoding="async" loading="lazy" alt="SharePoint 2016" src="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1.png" srcset="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1.png 975w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1-150x139.png 150w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1-300x278.png 300w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1-696x645.png 696w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-1-453x420.png 453w" width="602" height="558" /><figcaption>The SharePoint home in Office 365.</figcaption></figure>
+<p><strong>New SharePoint User Experiences and SharePoint Mobile App</strong></p>
+<p>Along with the enhancements to the SharePoint home, SharePoint Online is getting a new modern facelift for all the key areas of SharePoint, including Team Sites, Document Libraries and Publishing. The refresh will start in SharePoint Online. Newly created Team Sites will get the new user interface as they’re created, while existing Team Sites will get options to apply the new interface over time. Soon after the Team Site updates, Microsoft will update SharePoint Online lists to also get their own user interface refresh.</p>
+<figure id="attachment_40543"><img decoding="async" loading="lazy" alt="SharePoint 2016" src="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2.png" srcset="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2.png 975w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2-150x88.png 150w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2-300x176.png 300w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2-696x408-1.png 696w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-2-717x420.png 717w" width="600" height="351" /><figcaption>The updated SharePoint Online Team Site user interface.</figcaption></figure>
+<p>Thanks to the success of SharePoint, Microsoft has virtually owned the idea of corporate intranet portals. That said, many aspects of the SharePoint user interface, as it relates to intranet portals, have gotten a little stale. For 2016, intranets built on SharePoint Online will be freshened up. For custom intranet portals, SharePoint Online will have updated pages that allow businesses to create internal news and announcements, blogs and even intranet web pages easily, with a new publishing workflow and modern interface that rivals any beautifully designed website you’d see today.</p>
+<p>To add these modern enhancements to your favorite pocket sized device, Microsoft will soon release a new mobile app called, simply, SharePoint, first on iOS and then on Android and Windows later in the year. The mobile app will work with both the new user interface in SharePoint Online but also the on-premises SharePoint 2016 server and even SharePoint 2013.</p>
+<figure id="attachment_40544"><img decoding="async" loading="lazy" alt="SharePoint 2016 " src="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3.png" srcset="http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3.png 975w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3-150x78.png 150w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3-300x157.png 300w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3-696x363.png 696w, http://blog.rackspace.com/wp-content/uploads/2016/05/SharePoint-2016-3-805x420.png 805w" width="601" height="314" /><figcaption>The SharePoint mobile app on Windows, iOS and Android.</figcaption></figure>
+<p><strong>Microsoft Flow and PowerApps</strong></p>
+<p>Microsoft demonstrated two other really interesting applications at the launch, Microsoft Flow and PowerApps. Think of Microsoft Flow as way to pull data from other business data sources into SharePoint lists with conditional if/that/then logic. Once the data is in a list, PowerApps can be created by users via a wizard-type, rapid development model, creating rich, mobile friendly form views of their data. It’s worth noting that this isn’t a replacement for the older InfoPath product; think of these apps as another tool in the SharePoint toolbox.</p>
+<p><strong>New SharePoint Framework</strong></p>
+<p>Finally, Microsoft described a really cool new development model that doesn’t replace the old model, but enhances it. This framework consists of a new canvas-based page model that can leverage client-side coding solutions for creating powerful modern web applications that live inside SharePoint. The idea is to bring today’s code developers, raised on modern JavaScript coding techniques, into the SharePoint world by letting them use current development tools and open source libraries to work with the SharePoint user interface in new and exciting ways.</p>
+<p>I’m excited to see all the new features that Microsoft demoed today; the future is clearly bright for SharePoint in 2016 and beyond.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

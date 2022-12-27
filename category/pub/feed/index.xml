@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>pub &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Sat, 02 Aug 2008 22:21:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>IE7 &#034;Operation Aborted&#034; Error on Many Sites</title>
+		<link>./../../2008/08/ie7-operation-aborted-error-on-many.html</link>
+					<comments>./../../2008/08/ie7-operation-aborted-error-on-many.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sat, 02 Aug 2008 22:21:00 +0000</pubDate>
+				<category><![CDATA[pub]]></category>
+		<guid isPermaLink="false">/?p=618</guid>
+
+					<description><![CDATA[All of the sudden my IE7 was going crazy visiting many popular blogging services including Lifehacker and Gizmodo. It pops up this &#8220;Operation Aborted&#8221; error and then immediately clears the page when you click OK (which is super annoying). After trying to turn off and on my plugins and going a little bit crazy, it turns out that this is a problem that the IE8 team is aware of and have fixed in the latest beta. Its related to javascript page rewrites after the page has loaded. Apparently SiteMeter, a popular website traffic analysis tool was throwing this error all…]]></description>
+										<content:encoded><![CDATA[<p>All of the sudden my IE7 was going crazy visiting many popular blogging services including Lifehacker and Gizmodo. It pops up this &#8220;Operation Aborted&#8221; error and then immediately clears the page when you click OK (which is super annoying). After trying to turn off and on my plugins and going a little bit crazy, it turns out that this is a problem that the IE8 team is aware of and have fixed in the latest beta. Its related to javascript page rewrites after the page has loaded. Apparently SiteMeter, a popular website traffic analysis tool was throwing this error all over the web for the past few days. So rest assured the problem most likely isn&#8217;t your PC, its probably SiteMeter or some other Javascript.</p>
+<p><a href="http://www.inquisitr.com/2097/site-meter-causing-internet-explorer-failure/">http://www.inquisitr.com/2097/site-meter-causing-internet-explorer-failure/</a></p>
+<p><a href="http://blogs.msdn.com/ie/archive/2008/04/23/what-happened-to-operation-aborted.aspx">http://blogs.msdn.com/ie/archive/2008/04/23/what-happened-to-operation-aborted.aspx</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/08/ie7-operation-aborted-error-on-many.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Forms &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Sun, 31 Mar 2019 20:31:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Parallel Approvals using Microsoft Flow, Forms &#038; SharePoint</title>
+		<link>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
+					<comments>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sun, 31 Mar 2019 20:31:19 +0000</pubDate>
+				<category><![CDATA[Flow]]></category>
+		<category><![CDATA[Forms]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">http://blog.drisgill.com/?p=1074</guid>
+
+					<description><![CDATA[I think one of the most common needs in any business is to create a simple approval workflow for more than one person to approve or deny a request. Office 365 has many simple to use tools that can be combined to create a user-friendly solution to this problem. Microsoft Forms can be used to quickly create a form that anyone in your organization can fill out, then a Flow can be created to pick up the responses, write them to a SharePoint list, and then send approval emails to multiple people to approve / or deny the request. Flow…]]></description>
+										<content:encoded><![CDATA[<p>I think one of the most common needs in any business is to create a simple approval workflow for more than one person to approve or deny a request. Office 365 has many simple to use tools that can be combined to create a user-friendly solution to this problem. Microsoft Forms can be used to quickly create a form that anyone in your organization can fill out, then a Flow can be created to pick up the responses, write them to a SharePoint list, and then send approval emails to multiple people to approve / or deny the request. Flow can then update the SharePoint list with the results as well as emailing back the original Form submitter with the result.</p>
+<p>To create something like this its best to start with the Form and the SharePoint list. If you can get both of these right before starting your Flow, it makes picking options in Flow much easier. Here is a simple Form I created with just two fields for this example:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1082 size-large" src="/wp-content/uploads/2019/03/form-1-1024x906.png" alt="form" width="1024" height="906" srcset="/wp-content/uploads/2019/03/form-1-1024x906.png 1024w, /wp-content/uploads/2019/03/form-1-300x265.png 300w, /wp-content/uploads/2019/03/form-1-768x679.png 768w, /wp-content/uploads/2019/03/form-1.png 1413w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Once you have your Form created, you can create a SharePoint List to receive the selections as well as columns to collect the approvals and reasons from each approver (for this demo I have Randy and Rachel doing approvals). For my list I have these columns:</p>
+<ul>
+<li>Title – Will holds the request text box entry</li>
+<li>Selected Option – Will holds the radio button entry</li>
+<li>Rachel Approval &amp; Randy Approval – Each column holds the Approve or Reject from the Flow</li>
+<li>Rachel Reason &amp; Randy Reason – Each column holds the Approval comment from each approver</li>
+</ul>
+<p>I’ve found that it’s best to make all these columns either Single Line of Text or Multiple Lines of Text. These column types help make the Flow creation and operation go smoother. Here is a screenshot of my list:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1079 size-large" src="/wp-content/uploads/2019/03/List-1024x103.png" alt="List" width="1024" height="103" srcset="/wp-content/uploads/2019/03/List-1024x103.png 1024w, /wp-content/uploads/2019/03/List-300x30.png 300w, /wp-content/uploads/2019/03/List-768x77.png 768w, /wp-content/uploads/2019/03/List-1536x155.png 1536w, /wp-content/uploads/2019/03/List.png 1878w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Next, to start creating my Flow, I opened Flow and used Create From Template, searched on “Forms” and picked the “Record form responses in SharePoint”:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1084 size-large" src="/wp-content/uploads/2019/03/template-1024x767.png" alt="template" width="1024" height="767" srcset="/wp-content/uploads/2019/03/template-1024x767.png 1024w, /wp-content/uploads/2019/03/template-300x225.png 300w, /wp-content/uploads/2019/03/template-768x575.png 768w, /wp-content/uploads/2019/03/template.png 1284w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>You may have to authenticate into each Flow connector at the next step, but after that the shell of a Flow will be created:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1085 size-large" src="/wp-content/uploads/2019/03/template-flow-1009x1024.png" alt="template flow" width="1009" height="1024" srcset="/wp-content/uploads/2019/03/template-flow-1009x1024.png 1009w, /wp-content/uploads/2019/03/template-flow-296x300.png 296w, /wp-content/uploads/2019/03/template-flow-768x779.png 768w, /wp-content/uploads/2019/03/template-flow.png 1283w" sizes="(max-width: 1009px) 100vw, 1009px" /></p>
+<p>From there it’s a matter of filling out the Flow options to match your Form, SharePoint site, SharePoint list, and then picking Form fields to put into the SharePoint list columns:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1088 size-large" src="/wp-content/uploads/2019/03/step-1-flow-625x1024.png" alt="step 1 flow" width="625" height="1024" srcset="/wp-content/uploads/2019/03/step-1-flow-625x1024.png 625w, /wp-content/uploads/2019/03/step-1-flow-183x300.png 183w, /wp-content/uploads/2019/03/step-1-flow-768x1259.png 768w, /wp-content/uploads/2019/03/step-1-flow-937x1536.png 937w, /wp-content/uploads/2019/03/step-1-flow.png 1011w" sizes="(max-width: 625px) 100vw, 625px" /></p>
+<p>Step 1: Select your Form from the drop down</p>
+<p>Step 2: Leave “List of responses” alone you will need that for the Flow to work</p>
+<p>Step 3: Select your Form again (silly.. I know) and then leave the Response id with the default settings.</p>
+<p>Step 4: Select your SharePoint site from the sites that you have access to. Then select a list from this site (therefore it’s best to have started by creating your list). After you select the list, all the available columns will flow out underneath it. Since we are just collecting Form entries right now, we can just drag Form fields into the Title and Selected Option columns.</p>
+<p>For my Form I picked “What is your request” and “Pick an option”. The next screenshot shows how you select fields from your Form:</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1089 size-large" src="/wp-content/uploads/2019/03/field-picker-1024x571.png" alt="field picker" width="1024" height="571" srcset="/wp-content/uploads/2019/03/field-picker-1024x571.png 1024w, /wp-content/uploads/2019/03/field-picker-300x167.png 300w, /wp-content/uploads/2019/03/field-picker-768x428.png 768w, /wp-content/uploads/2019/03/field-picker.png 1286w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>If all went as planned, you should be able to Save and Test your Flow now. When you submit your Form, it will kickoff the Flow and add a row to you SharePoint list. If you get errors, Flow will try to show you what you need to fix. If you run into any problems with Form fields, SharePoint lists, or list columns not showing correct in Flow, try closing the Flow a re-editing it. Sometimes Flow can be a pain about this.</p>
+<p><img decoding="async" loading="lazy" class="alignnone wp-image-1091 size-full" src="/wp-content/uploads/2019/03/test.png" alt="test" width="420" height="276" srcset="/wp-content/uploads/2019/03/test.png 420w, /wp-content/uploads/2019/03/test-300x197.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></p>
+<p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1092" src="/wp-content/uploads/2019/03/test-result-1024x666.png" alt="test result" width="1024" height="666" srcset="/wp-content/uploads/2019/03/test-result-1024x666.png 1024w, /wp-content/uploads/2019/03/test-result-300x195.png 300w, /wp-content/uploads/2019/03/test-result-768x499.png 768w, /wp-content/uploads/2019/03/test-result.png 1029w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>In the next part, we will need to add in the Parallel Approval steps, record those answers back to SharePoint, and then if both answers are Approved, we can send back an approval email or if not, a rejection email. For those that are impatient and want to try this on their own, I’ve included a screenshot of the final Flow (click to enlarge):</p>
+<p><a href="/wp-content/uploads/2019/03/entire-flow.png"><img decoding="async" loading="lazy" class="alignnone wp-image-1076 size-large" src="/wp-content/uploads/2019/03/entire-flow-506x1024.png" alt="entire flow" width="506" height="1024" srcset="/wp-content/uploads/2019/03/entire-flow-506x1024.png 506w, /wp-content/uploads/2019/03/entire-flow-148x300.png 148w, /wp-content/uploads/2019/03/entire-flow-768x1554.png 768w, /wp-content/uploads/2019/03/entire-flow-759x1536.png 759w, /wp-content/uploads/2019/03/entire-flow-1012x2048.png 1012w" sizes="(max-width: 506px) 100vw, 506px" /></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

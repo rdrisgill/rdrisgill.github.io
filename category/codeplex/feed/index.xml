@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>codeplex &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Thu, 27 Nov 2008 19:32:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>SharePoint Name.dll ActiveX Fix has been Featurized</title>
+		<link>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
+					<comments>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 27 Nov 2008 19:32:00 +0000</pubDate>
+				<category><![CDATA[activex]]></category>
+		<category><![CDATA[codeplex]]></category>
+		<guid isPermaLink="false">/?p=603</guid>
+
+					<description><![CDATA[My friend Larry Riemann and I have taken my Name.DLL ActiveX Fix and turned it into a deployable Feature / Solution called SPAXO. The nice thing about SPAXO is that it will apply the fix to all pages on your site no matter what master page is applied without you having to add the Javascript code to your master page manually. We accomplish this by using the .Net HTTPModule to inject the Javascript into the page stream automagically. At this point the code is a major Use At Your Own Risk. If you are feeling daring, head over to Codeplex…]]></description>
+										<content:encoded><![CDATA[<p>My friend Larry Riemann and I have taken my <a href="http://blog.drisgill.com/2007/09/fixing-namedll-activex-problem-mossman.html">Name.DLL ActiveX Fix</a> and turned it into a deployable Feature / Solution called SPAXO. The nice thing about SPAXO is that it will apply the fix to all pages on your site no matter what master page is applied without you having to add the Javascript code to your master page manually. We accomplish this by using the .Net HTTPModule to inject the Javascript into the page stream automagically. At this point the code is a major <strong>Use At Your Own Risk</strong>. If you are feeling daring, head over to Codeplex and give it a shot.</p>
+<p><a href="http://www.codeplex.com/SPAXO">CodePlex: SPAXO (SharePoint ActiveX Override)</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

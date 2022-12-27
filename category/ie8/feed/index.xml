@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>IE8 &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Fri, 07 Mar 2008 00:07:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>IE8 Beta 1 with SharePoint (Revisit)</title>
+		<link>./../../2008/03/ie8-beta-1-with-sharepoint-revisit.html</link>
+					<comments>./../../2008/03/ie8-beta-1-with-sharepoint-revisit.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Fri, 07 Mar 2008 00:07:00 +0000</pubDate>
+				<category><![CDATA[IE8]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=631</guid>
+
+					<description><![CDATA[Ok, if you&#8217;ve read my previous post where I talk about IE8 rendering out of the box MOSS Master Pages poorly, you may have been confused by some of my results. Turns out I was using the Developer Tools to switch the Render Mode manually to IE8 which is not accurate. Turns out if a webpage does NOT include a doctype (like default.master and application.master do not) IE8 will default its rendering behavior to the old way of browsing (quirks mode in this case). Thus default.master and application.master, while still not great, do render exactly the same in IE8 as…]]></description>
+										<content:encoded><![CDATA[<div>
+<p>Ok, if you&#8217;ve read <a href="http://themossman.blogspot.com/2008/03/ie8-beta-1-sharepoint-screenshots.html">my previous post</a> where I talk about IE8 rendering out of the box MOSS Master Pages poorly, you may have been confused by some of my results. Turns out I was using the Developer Tools to switch the Render Mode manually to IE8 which is not accurate. Turns out if a webpage does NOT include a doctype (like default.master and application.master do not) IE8 will default its rendering behavior to the old way of browsing (quirks mode in this case). Thus default.master and application.master, while still not great, do render exactly the same in IE8 as they would in IE7. Now BlueBand on the other hand (and the other &#8220;bands&#8221;) DOES have a doctype so it renders in IE8 mode by default and thusly has problems.</p>
+<p>So, it would seem that the best case scenario for now with custom Master Pages, is to declare a doctype of your choice, but to include the new meta tag that forces IE7 rendering (since otherwise OOTB moss will have many problems). I for one, hope that the next service pack or version includes the appropriate back-end code to support full compliant mode.</p>
+<p>P.s. Turns out you can always check your rendering mode quickly with this bookmarklet: <a href="http://www.enhanceie.com/ie/ie8.asp">http://www.enhanceie.com/ie/ie8.asp</a></p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/03/ie8-beta-1-with-sharepoint-revisit.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>IE8 Beta 1 SharePoint Screenshots</title>
+		<link>./../../2008/03/ie8-beta-1-sharepoint-screenshots.html</link>
+					<comments>./../../2008/03/ie8-beta-1-sharepoint-screenshots.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 05 Mar 2008 19:51:00 +0000</pubDate>
+				<category><![CDATA[IE8]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=632</guid>
+
+					<description><![CDATA[I went and grabbed the IE8 early beta and tried it out in a Vista VM. So far, the out of the box MOSS experience isn&#8217;t looking so hot. Of course you could always switch it to IE7 browsing mode and everything looks great. My own MOSS designs look pretty funky as well. Here are some screenshots of IE8 and the out of the box SharePoint UI&#8217;s: UPDATE #4 &#8211; Ok, after asking some questions on the IEBlog, I now understand what I was seeing in MOSS. Default.master does indeed render in IE7 mode by default, while Blueband renders in IE8 mode. You can…]]></description>
+										<content:encoded><![CDATA[<p mce_keep="true">I went and <a href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm" target="_blank" mce_href="http://www.microsoft.com/windows/products/winfamily/ie/ie8/readiness/Install.htm" rel="noopener">grabbed the IE8 early beta</a> and tried it out in a Vista VM. So far, the out of the box MOSS experience isn&#8217;t looking so hot. Of course you could always switch it to IE7 browsing mode and everything looks great. My own MOSS designs look pretty funky as well. Here are some screenshots of IE8 and the out of the box SharePoint UI&#8217;s:</p>
+<p mce_keep="true">UPDATE #4 &#8211; Ok, after asking some questions on the IEBlog, I now understand what I was seeing in MOSS. Default.master does indeed render in IE7 mode by default, while Blueband renders in IE8 mode. You can check the render mode easily with this bookmarklet: <a href="http://www.enhanceie.com/ie/ie8.asp">http://www.enhanceie.com/ie/ie8.asp</a></p>
+<p mce_keep="true">UPDATE #3 &#8211; This is what I get for posting so early in the beta. Just read the latest post on the IE8 Blog. Based on their description, I think the MOSS ootb default.master would render in IE7 mode by default as it does not have a doctype. This is why it looks normal in IE8 UNLESS you manually force the browser to render in IE8 mode with the Developer Tools&#8230; at least this is my latest theory.</p>
+<p mce_keep="true">UPDATE #2 &#8211; Looks like I might have gotten fooled by the IE8 Developer Tools. I was using the Change Compatibility Mode to switch back and forth between IE7 and IE8 rendering. I&#8217;m not sure why, but this really messes up my MOSS UI. After closing and opening IE8 the MOSS UI&#8217;s look better. Very strange&#8230; thanks to Wictor for pointing out the flaws in my screenshots. Maybe I can chalk this up to this being an early beta.</p>
+<p mce_keep="true">UPDATE &#8211; on the Acid Test screenshot. Looks like its a known issue with some of the mirrored Acid Test links, from the IEBlog: &#8220;IE8 fails the copies of ACID2 due to the cross domain security checks IE performs for ActiveX controls.  Since IE does not natively handle HTML content in the OBJECT tag, but rather uses IE’s rendering engine as an ActiveX to display this HTML content, the same cross domain security checks also apply.&#8221;</p>
+<p mce_keep="true">Default.master:</p>
+<p mce_keep="true"><a href="http://209.208.125.75/~randy/moss/ie8/default_master.jpg" target="_blank" mce_href="http://209.208.125.75/~randy/moss/ie8/default_master.jpg" rel="noopener"><img decoding="async" src="http://209.208.125.75/~randy/moss/ie8/thumb_default_master.jpg" mce_src="http://209.208.125.75/~randy/moss/ie8/thumb_default_master.jpg"></a></p>
+<p mce_keep="true">BlueBand.master:</p>
+<p mce_keep="true"><a href="http://209.208.125.75/~randy/moss/ie8/blueband.jpg" target="_blank" mce_href="http://209.208.125.75/~randy/moss/ie8/blueband.jpg" rel="noopener"><img decoding="async" src="http://209.208.125.75/~randy/moss/ie8/thumb_blueband.jpg" mce_src="http://209.208.125.75/~randy/moss/ie8/thumb_blueband.jpg"></a></p>
+<p mce_keep="true">Manage Web Part Menu:</p>
+<p mce_keep="true"><a href="http://209.208.125.75/~randy/moss/ie8/wp-menu.jpg" target="_blank" mce_href="http://209.208.125.75/~randy/moss/ie8/wp-menu.jpg" rel="noopener"><img decoding="async" src="http://209.208.125.75/~randy/moss/ie8/thumb_wp-menu.jpg" mce_src="http://209.208.125.75/~randy/moss/ie8/thumb_wp-menu.jpg"></a></p>
+<p mce_keep="true">Admin Menu:</p>
+<p mce_keep="true"><a href="http://209.208.125.75/~randy/moss/ie8/admin-menu.jpg" target="_blank" mce_href="http://209.208.125.75/~randy/moss/ie8/admin-menu.jpg" rel="noopener"><img decoding="async" src="http://209.208.125.75/~randy/moss/ie8/thumb_admin-menu.jpg" mce_src="http://209.208.125.75/~randy/moss/ie8/thumb_admin-menu.jpg"></a></p>
+<p mce_keep="true"><a href="http://209.208.125.75/~randy/moss/ie8/acidtest2.jpg" target="_blank" mce_href="http://209.208.125.75/~randy/moss/ie8/acidtest2.jpg" rel="noopener"></a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/03/ie8-beta-1-sharepoint-screenshots.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>IE8 Will Render in Standards Mode by Default</title>
+		<link>./../../2008/03/ie8-will-render-in-standards-mode-by.html</link>
+					<comments>./../../2008/03/ie8-will-render-in-standards-mode-by.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 05 Mar 2008 00:07:00 +0000</pubDate>
+				<category><![CDATA[IE8]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=633</guid>
+
+					<description><![CDATA[As the title implies, the IE8 team has reversed their decision to have IE8 render in IE7 mode by default and instead have it render in full Acid2 confirmed standards goodness by default. Read the post here My question is, will the SharePoint team release a standards based default.master (hint: a doctype would help) or will they just tag it to render in IE7 Mode?]]></description>
+										<content:encoded><![CDATA[<div>
+<p>As the title implies, the IE8 team has reversed their decision to have IE8 render in IE7 mode by default and instead have it render in full <a href="http://channel9.msdn.com/ShowPost.aspx?PostID=367214" target="_blank" rel="noopener">Acid2 confirmed standards goodness</a> by default. </p>
+<p><a href="http://blogs.msdn.com/ie/archive/2008/03/03/microsoft-s-interoperability-principles-and-ie8.aspx" target="_blank" rel="noopener">Read the post here</a></p>
+<p>My question is, will the SharePoint team release a standards based default.master (hint: a doctype would help) or will they just tag it to render in IE7 Mode?</p>
+</p></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/03/ie8-will-render-in-standards-mode-by.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

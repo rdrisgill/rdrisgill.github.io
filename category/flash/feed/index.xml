@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>flash &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Wed, 10 Sep 2008 12:00:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Project Rosetta</title>
+		<link>./../../2008/09/project-rosetta.html</link>
+					<comments>./../../2008/09/project-rosetta.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 10 Sep 2008 12:00:00 +0000</pubDate>
+				<category><![CDATA[adobe]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[flash]]></category>
+		<category><![CDATA[flex]]></category>
+		<category><![CDATA[silverlight]]></category>
+		<guid isPermaLink="false">/?p=615</guid>
+
+					<description><![CDATA[We all know that Silverlight is essentially Microsoft&#8217;s attempt at making a Flash killer (to me its more of a Flex killer, but that&#8217;s neither here or there). I&#8217;ve been saying for a while that Microsoft should be speaking to us Actionscript programmers a little more passionately than they have been and it looks like Microsoft is finally doing that. Project Rosetta is a series of articles aimed at folks with Flash experience specifically for ramping them up on Silverlight. Personally, I hope they post some stuff on Silverlight from a Flex perspective, but this is a great start. Project…]]></description>
+										<content:encoded><![CDATA[<p>We all know that Silverlight is essentially Microsoft&#8217;s attempt at making a Flash killer (to me its more of a Flex killer, but that&#8217;s neither here or there). I&#8217;ve been saying for a while that Microsoft should be speaking to us Actionscript programmers a little more passionately than they have been and it looks like Microsoft is finally doing that. Project Rosetta is a series of articles aimed at folks with Flash experience specifically for ramping them up on Silverlight. Personally, I hope they post some stuff on Silverlight from a Flex perspective, but this is a great start.</p>
+<p><a href="http://www.projectrosetta.com/">Project Rosetta</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/09/project-rosetta.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

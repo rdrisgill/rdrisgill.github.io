@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Design &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Wed, 10 Sep 2008 12:00:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Project Rosetta</title>
+		<link>./../../2008/09/project-rosetta.html</link>
+					<comments>./../../2008/09/project-rosetta.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 10 Sep 2008 12:00:00 +0000</pubDate>
+				<category><![CDATA[adobe]]></category>
+		<category><![CDATA[Design]]></category>
+		<category><![CDATA[flash]]></category>
+		<category><![CDATA[flex]]></category>
+		<category><![CDATA[silverlight]]></category>
+		<guid isPermaLink="false">/?p=615</guid>
+
+					<description><![CDATA[We all know that Silverlight is essentially Microsoft&#8217;s attempt at making a Flash killer (to me its more of a Flex killer, but that&#8217;s neither here or there). I&#8217;ve been saying for a while that Microsoft should be speaking to us Actionscript programmers a little more passionately than they have been and it looks like Microsoft is finally doing that. Project Rosetta is a series of articles aimed at folks with Flash experience specifically for ramping them up on Silverlight. Personally, I hope they post some stuff on Silverlight from a Flex perspective, but this is a great start. Project…]]></description>
+										<content:encoded><![CDATA[<p>We all know that Silverlight is essentially Microsoft&#8217;s attempt at making a Flash killer (to me its more of a Flex killer, but that&#8217;s neither here or there). I&#8217;ve been saying for a while that Microsoft should be speaking to us Actionscript programmers a little more passionately than they have been and it looks like Microsoft is finally doing that. Project Rosetta is a series of articles aimed at folks with Flash experience specifically for ramping them up on Silverlight. Personally, I hope they post some stuff on Silverlight from a Flex perspective, but this is a great start.</p>
+<p><a href="http://www.projectrosetta.com/">Project Rosetta</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/09/project-rosetta.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Running Photoshop CS3 on Windows 2003</title>
+		<link>./../../2008/08/running-photoshop-cs3-on-windows-2003.html</link>
+					<comments>./../../2008/08/running-photoshop-cs3-on-windows-2003.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Thu, 21 Aug 2008 22:11:00 +0000</pubDate>
+				<category><![CDATA[adobe]]></category>
+		<category><![CDATA[Design]]></category>
+		<guid isPermaLink="false">/?p=616</guid>
+
+					<description><![CDATA[If you have ever tried to install Photoshop on a Windows Server machine you may have seen a warning that refuses to install on anything but Vista or XPsp2. I&#8217;m sure this is massively unsupported; But if you have a temporary need, its a passable solution: Browse to: Adobe CS3\Photoshop\Adobe CS3\payloads\AdobePhotoshop10en_US_volume\AdobePhotoshop10en_US_volume.proxy.xml Edit in notepad and find &#8220;Server2003&#8221; Change &#8220;Server2003&#8221;:{&#8220;Exclude&#8221;:true} to &#8220;Server2003&#8221;:{&#8220;Require&#8221;:true} Save the file Re-run Setup.exe You should now be able to install the software, I&#8217;m sure some things will work poorly, but this is the price you pay.]]></description>
+										<content:encoded><![CDATA[<p>If you have ever tried to install Photoshop on a Windows Server machine you may have seen a warning that refuses to install on anything but Vista or XPsp2. I&#8217;m sure this is massively unsupported; But if you have a temporary need, its a passable solution: </p>
+<ul>
+<li>Browse to: Adobe CS3\Photoshop\Adobe CS3\payloads\AdobePhotoshop10en_US_volume\AdobePhotoshop10en_US_volume.proxy.xml </li>
+<li>Edit in notepad and find &#8220;Server2003&#8221; </li>
+<li>Change &#8220;Server2003&#8221;:{&#8220;Exclude&#8221;:true} to &#8220;Server2003&#8221;:{&#8220;Require&#8221;:true} </li>
+<li>Save the file</li>
+<li>Re-run Setup.exe</li>
+</ul>
+<p>You should now be able to install the software, I&#8217;m sure some things will work poorly, but this is the price you pay.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/08/running-photoshop-cs3-on-windows-2003.html/feed/index.html</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Big Changes for the Mossman (Plus a New SP Book)</title>
+		<link>./../../2008/07/big-changes-for-mossman-plus-new-sp.html</link>
+					<comments>./../../2008/07/big-changes-for-mossman-plus-new-sp.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Mon, 07 Jul 2008 14:49:00 +0000</pubDate>
+				<category><![CDATA[Design]]></category>
+		<category><![CDATA[SharePoint]]></category>
+		<guid isPermaLink="false">/?p=624</guid>
+
+					<description><![CDATA[July 4th 2008 was Mossman independence day, in that I have left my cubicle job at a large consulting firm and have begun working with a few small dedicated SharePoint consulting companies. I will be focused on helping them with their MOSS branding efforts. Also, in the coming days/weeks I will be removing the veil of secrecy surrounding my true identity. Truth is, the only reason I started this pseudonym was because I was never sure what my employers policy on work blogging was. In related news I have a book coming out in September with Wrox entitled &#8220;Professional SharePoint…]]></description>
+										<content:encoded><![CDATA[<p>July 4th 2008 was Mossman independence day, in that I have left my cubicle job at a large consulting firm and have begun working with a few small dedicated SharePoint consulting companies. I will be focused on helping them with their MOSS branding efforts.</p>
+<p>Also, in the coming days/weeks I will be removing the veil of secrecy surrounding my true identity. Truth is, the only reason I started this pseudonym was because I was never sure what my employers policy on work blogging was. In related news I have a book coming out in September with Wrox entitled &#8220;Professional SharePoint 2007 Design&#8221;. This book will be focused on just the design and branding process with SharePoint. The Amazon page for the book lists my true identity (and a photo of my face!). Can anyone guess which author I am?</p>
+<p><a href="http://www.amazon.com/gp/product/047028580X" target="_blank" rel="noopener">Wrox: Professional SharePoint 2007 Design</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/07/big-changes-for-mossman-plus-new-sp.html/feed/index.html</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>GettyImages Moodstream</title>
+		<link>./../../2008/06/gettyimages-moodstream.html</link>
+					<comments>./../../2008/06/gettyimages-moodstream.html#respond</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Wed, 11 Jun 2008 17:45:00 +0000</pubDate>
+				<category><![CDATA[adobe]]></category>
+		<category><![CDATA[Design]]></category>
+		<guid isPermaLink="false">/?p=628</guid>
+
+					<description><![CDATA[GettyImagesﾠis usingﾠFlash / Flex to make a really coolﾠ&#8221;multimedia mood ring&#8221; for lack of a better description. You click your mood from a dial selector and then random intriguing videos and images fade in and out over a soundtrack that matches. The full screen images and video have an interlaced look (i&#8217;m guessing to help with full screen performance). http://moodstream.gettyimages.com/]]></description>
+										<content:encoded><![CDATA[<p>GettyImagesﾠis usingﾠFlash / Flex to make a really coolﾠ&#8221;multimedia mood ring&#8221; for lack of a better description. You click your mood from a dial selector and then random intriguing videos and images fade in and out over a soundtrack that matches. The full screen images and video have an interlaced look (i&#8217;m guessing to help with full screen performance). </p>
+<p><a href="http://moodstream.gettyimages.com/">http://moodstream.gettyimages.com/</a> </p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2008/06/gettyimages-moodstream.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: SP2010 Branding Tip #2 – Custom Master Pages and Dialog Boxes	</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./</link>
+	<description></description>
+	<lastBuildDate>Sat, 17 Jun 2017 14:50:32 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>
+		By: webwmn		</title>
+		<link>./comment-page-1/index.html#comment-334</link>
+
+		<dc:creator><![CDATA[webwmn]]></dc:creator>
+		<pubDate>Sat, 17 Jun 2017 14:50:32 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-334</guid>
+
+					<description><![CDATA[I used a width of 60% and it worked and also used .ms-dialog #s4-v4body also allowed me to remove the background image and go with white. Resolved.
+
+thanks]]></description>
+			<content:encoded><![CDATA[<p>I used a width of 60% and it worked and also used .ms-dialog #s4-v4body also allowed me to remove the background image and go with white. Resolved.</p>
+<p>thanks</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: webwmn		</title>
+		<link>./comment-page-1/index.html#comment-333</link>
+
+		<dc:creator><![CDATA[webwmn]]></dc:creator>
+		<pubDate>Fri, 16 Jun 2017 15:31:12 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-333</guid>
+
+					<description><![CDATA[How does this work in a V4 master that is mostly customized by an attached CSS file?
+
+I used a V4 master to create a system master customized by css. The modal window is now very wide. When I used &quot;s4-notdlg&quot; in the body container, the site went to full width and the scroll bar didn&#039;t work. I tried using your modal script here but it didn&#039;t work.
+
+.ms-dialog #s4-bodyContainer {
+margin:0px !important;
+width:auto !important;
+height:auto !important;
+padding: 0px !important;
+}]]></description>
+			<content:encoded><![CDATA[<p>How does this work in a V4 master that is mostly customized by an attached CSS file?</p>
+<p>I used a V4 master to create a system master customized by css. The modal window is now very wide. When I used &#8220;s4-notdlg&#8221; in the body container, the site went to full width and the scroll bar didn&#8217;t work. I tried using your modal script here but it didn&#8217;t work.</p>
+<p>.ms-dialog #s4-bodyContainer {<br />
+margin:0px !important;<br />
+width:auto !important;<br />
+height:auto !important;<br />
+padding: 0px !important;<br />
+}</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mahesh		</title>
+		<link>./comment-page-1/index.html#comment-332</link>
+
+		<dc:creator><![CDATA[Mahesh]]></dc:creator>
+		<pubDate>Sat, 06 Jun 2015 09:29:38 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-332</guid>
+
+					<description><![CDATA[Thanks a lot. This was what I was looking for. Helped me a lot.]]></description>
+			<content:encoded><![CDATA[<p>Thanks a lot. This was what I was looking for. Helped me a lot.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Adrian Peraza		</title>
+		<link>./comment-page-1/index.html#comment-331</link>
+
+		<dc:creator><![CDATA[Adrian Peraza]]></dc:creator>
+		<pubDate>Wed, 28 May 2014 21:00:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-331</guid>
+
+					<description><![CDATA[Hi Randy,
+
+Could you give me some help, with the following issue, please?
+
+I&#039;m applying a custom master page to subsite. After applied it, all forms used by libraries, lists give errors. (DispForm.aspx, EditForm.aspx, NewForm.aspx). I&#039;d would to like use the default sharepoint master page for this forms (for example V4.master)
+
+I&#039;ll appreciate any comment.
+
+Regards,
+Adrian]]></description>
+			<content:encoded><![CDATA[<p>Hi Randy,</p>
+<p>Could you give me some help, with the following issue, please?</p>
+<p>I&#8217;m applying a custom master page to subsite. After applied it, all forms used by libraries, lists give errors. (DispForm.aspx, EditForm.aspx, NewForm.aspx). I&#8217;d would to like use the default sharepoint master page for this forms (for example V4.master)</p>
+<p>I&#8217;ll appreciate any comment.</p>
+<p>Regards,<br />
+Adrian</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Clem		</title>
+		<link>./comment-page-1/index.html#comment-329</link>
+
+		<dc:creator><![CDATA[Clem]]></dc:creator>
+		<pubDate>Mon, 18 Nov 2013 12:47:42 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-329</guid>
+
+					<description><![CDATA[Keep in mind, using a custom master in SP2010 will kill people picker fields and lookup columns in lists.  Since the custom master will render in IE9, the switch back to IE8 for NewForm.aspx and EditForm.aspx does not happen.  It&#039;s a known bug which renders the use of custom master pages useless in SharePoint.]]></description>
+			<content:encoded><![CDATA[<p>Keep in mind, using a custom master in SP2010 will kill people picker fields and lookup columns in lists.  Since the custom master will render in IE9, the switch back to IE8 for NewForm.aspx and EditForm.aspx does not happen.  It&#8217;s a known bug which renders the use of custom master pages useless in SharePoint.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Marie		</title>
+		<link>./comment-page-1/index.html#comment-328</link>
+
+		<dc:creator><![CDATA[Marie]]></dc:creator>
+		<pubDate>Mon, 28 Oct 2013 18:51:28 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-328</guid>
+
+					<description><![CDATA[I used the class=&quot;s4-notdlg&quot; in those divs but I am getting dialog boxes that are empty, just have just the background of my custom page, no content in them.
+
+I looked at the padding, height and width of my wrapper (container) and there is nothing that seems to interfere:
+.wrapper {
+	width: 1060px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+I don&#039;t know why I am getting empty dialog boxes. Can you help?
+
+Marie]]></description>
+			<content:encoded><![CDATA[<p>I used the class=&#8221;s4-notdlg&#8221; in those divs but I am getting dialog boxes that are empty, just have just the background of my custom page, no content in them.</p>
+<p>I looked at the padding, height and width of my wrapper (container) and there is nothing that seems to interfere:<br />
+.wrapper {<br />
+	width: 1060px;<br />
+	background: #fff;<br />
+	margin: 0 auto;<br />
+}</p>
+<p>I don&#8217;t know why I am getting empty dialog boxes. Can you help?</p>
+<p>Marie</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: larry		</title>
+		<link>./comment-page-1/index.html#comment-327</link>
+
+		<dc:creator><![CDATA[larry]]></dc:creator>
+		<pubDate>Tue, 27 Aug 2013 11:14:53 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-327</guid>
+
+					<description><![CDATA[I have created a custom master page. the problem I am having in my dialogs are I am missing the images in the top right to close or resize. I cant figure out where to make the change to have them visible again. Any help would be greatly appreciated]]></description>
+			<content:encoded><![CDATA[<p>I have created a custom master page. the problem I am having in my dialogs are I am missing the images in the top right to close or resize. I cant figure out where to make the change to have them visible again. Any help would be greatly appreciated</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Randy Drisgill		</title>
+		<link>./comment-page-1/index.html#comment-325</link>
+
+		<dc:creator><![CDATA[Randy Drisgill]]></dc:creator>
+		<pubDate>Fri, 23 Jul 2010 16:12:27 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-325</guid>
+
+					<description><![CDATA[I might need to see a screenshot of whats going on. I have seen instances where you need to add extra CSS to get rid of padding and widths from custom branding that are applying to dialogs. I&#039;m not sure if this is what you mean buf for that I add CSS like this (customBody is my main page container):&lt;br /&gt;&lt;br /&gt;.ms-dialog .customBody {&lt;br /&gt; margin:0px !important;&lt;br /&gt; width:auto !important;&lt;br /&gt; height:auto !important;&lt;br /&gt; padding: 0px !important;&lt;br /&gt;}]]></description>
+			<content:encoded><![CDATA[<p>I might need to see a screenshot of whats going on. I have seen instances where you need to add extra CSS to get rid of padding and widths from custom branding that are applying to dialogs. I&#8217;m not sure if this is what you mean buf for that I add CSS like this (customBody is my main page container):</p>
+<p>.ms-dialog .customBody {<br /> margin:0px !important;<br /> width:auto !important;<br /> height:auto !important;<br /> padding: 0px !important;<br />}</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: wonderwoman		</title>
+		<link>./comment-page-1/index.html#comment-324</link>
+
+		<dc:creator><![CDATA[wonderwoman]]></dc:creator>
+		<pubDate>Fri, 23 Jul 2010 15:18:33 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-324</guid>
+
+					<description><![CDATA[Randy, can you check this out in firefox?  Cory is right - firefox does not resize properly.  If you have a solution, please let me know.]]></description>
+			<content:encoded><![CDATA[<p>Randy, can you check this out in firefox?  Cory is right &#8211; firefox does not resize properly.  If you have a solution, please let me know.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Muhanad Omar		</title>
+		<link>./comment-page-1/index.html#comment-323</link>
+
+		<dc:creator><![CDATA[Muhanad Omar]]></dc:creator>
+		<pubDate>Sun, 06 Jun 2010 22:06:50 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-323</guid>
+
+					<description><![CDATA[Thanks for the tip Randy, much appreciated!&lt;br /&gt;&lt;br /&gt;-Mo]]></description>
+			<content:encoded><![CDATA[<p>Thanks for the tip Randy, much appreciated!</p>
+<p>-Mo</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

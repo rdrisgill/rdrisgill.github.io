@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Blogging &#8211; Randy Drisgill</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description></description>
+	<lastBuildDate>Sun, 14 Apr 2013 19:07:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>Moved from Blogger to WordPress</title>
+		<link>./../../2013/04/moved-from-blogger-to-wordpress.html</link>
+					<comments>./../../2013/04/moved-from-blogger-to-wordpress.html#comments</comments>
+		
+		<dc:creator><![CDATA[randy]]></dc:creator>
+		<pubDate>Sun, 14 Apr 2013 19:07:12 +0000</pubDate>
+				<category><![CDATA[Blogging]]></category>
+		<guid isPermaLink="false">/?p=668</guid>
+
+					<description><![CDATA[After trying WordPress for our user group website I decided that it is a far superior blogging platform than Google&#8217;s Blogger. I&#8217;ve been meaning to move off of Blogger for a while now but was afraid of the potential hit to my Google results due to a change in URL formatting. Since coming over to Rackspace, I realized that I have access to create WordPress sites with through our cloud hosting so I decided to give it a try. I was pleased to find that there are tools for importing all my old posts and comments from Blogger to WordPress as well as settings to reformat…]]></description>
+										<content:encoded><![CDATA[<p>After trying WordPress for our user group website I decided that it is a far superior blogging platform than Google&#8217;s Blogger. I&#8217;ve been meaning to move off of Blogger for a while now but was afraid of the potential hit to my Google results due to a change in URL formatting. Since coming over to Rackspace, I realized that I have access to create WordPress sites with through our cloud hosting so I decided to give it a try.</p>
+<p>I was pleased to find that there are tools for importing all my old posts and comments from Blogger to WordPress as well as settings to reformat the WordPress URL&#8217;s to match Bloggers URL format. I was then hopeful that I could make the move fairly seamlessly so I flipped the lever on Saturday evening (weekends are pretty slow for SharePoint web traffic). The first thing I noticed was that clicking on my Google results from my phone was taking me to the correct URL but with ?m=1 appended to the end. This was making the results fail on mobile devices so I had to make some changes to the .htaccess file. Luckily it wasn&#8217;t too difficult to find a rewriting scheme to remove the m variables.</p>
+<p>So long story short, I&#8217;m hoping the move is seamless for my web traffic. If you see any problems please use my new contact form to let me know!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../../2013/04/moved-from-blogger-to-wordpress.html/feed/index.html</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

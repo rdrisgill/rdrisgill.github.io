@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: SharePoint Designer wrongfully says a file is checked out when it is not	</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./</link>
+	<description></description>
+	<lastBuildDate>Tue, 23 Jan 2018 22:34:58 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1</generator>
+	<item>
+		<title>
+		By: Emmy Eastwood		</title>
+		<link>./comment-page-1/index.html#comment-373</link>
+
+		<dc:creator><![CDATA[Emmy Eastwood]]></dc:creator>
+		<pubDate>Tue, 23 Jan 2018 22:34:58 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-373</guid>
+
+					<description><![CDATA[I actually went to the document&#039;s properties and clicked on Remove Properties and Personal Information.   That seems to have worked.  But I am not an expert.]]></description>
+			<content:encoded><![CDATA[<p>I actually went to the document&#8217;s properties and clicked on Remove Properties and Personal Information.   That seems to have worked.  But I am not an expert.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Anonymous		</title>
+		<link>./comment-page-1/index.html#comment-372</link>
+
+		<dc:creator><![CDATA[Anonymous]]></dc:creator>
+		<pubDate>Thu, 25 May 2017 10:51:59 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-372</guid>
+
+					<description><![CDATA[It worked with SharePoint Designer 2013. You guys are the number one life savers, thanks!]]></description>
+			<content:encoded><![CDATA[<p>It worked with SharePoint Designer 2013. You guys are the number one life savers, thanks!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Nate		</title>
+		<link>./comment-page-1/index.html#comment-371</link>
+
+		<dc:creator><![CDATA[Nate]]></dc:creator>
+		<pubDate>Thu, 27 Apr 2017 16:56:33 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-371</guid>
+
+					<description><![CDATA[This resolved same issue in SharePoint Online 2013.  Thanks!]]></description>
+			<content:encoded><![CDATA[<p>This resolved same issue in SharePoint Online 2013.  Thanks!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Anonymous		</title>
+		<link>./comment-page-1/index.html#comment-358</link>
+
+		<dc:creator><![CDATA[Anonymous]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2011 21:25:37 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-358</guid>
+
+					<description><![CDATA[You, sir, are a SharePoint god.]]></description>
+			<content:encoded><![CDATA[<p>You, sir, are a SharePoint god.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: batyandres		</title>
+		<link>./comment-page-1/index.html#comment-357</link>
+
+		<dc:creator><![CDATA[batyandres]]></dc:creator>
+		<pubDate>Sat, 20 Aug 2011 17:05:19 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-357</guid>
+
+					<description><![CDATA[thank you very much Randy, was very helpful]]></description>
+			<content:encoded><![CDATA[<p>thank you very much Randy, was very helpful</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Emmanuel		</title>
+		<link>./comment-page-1/index.html#comment-356</link>
+
+		<dc:creator><![CDATA[Emmanuel]]></dc:creator>
+		<pubDate>Fri, 09 Oct 2009 12:30:58 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-356</guid>
+
+					<description><![CDATA[You can try a Ctrl + F5 in designer and it will be ok&lt;br /&gt;&lt;br /&gt;Emmanuel]]></description>
+			<content:encoded><![CDATA[<p>You can try a Ctrl + F5 in designer and it will be ok</p>
+<p>Emmanuel</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: WYLIESHADOW		</title>
+		<link>./comment-page-1/index.html#comment-355</link>
+
+		<dc:creator><![CDATA[WYLIESHADOW]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2009 12:39:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=576#comment-355</guid>
+
+					<description><![CDATA[I had this same issue with Designer2007. When working with a master page, after a while it began hanging on to this &#039;checked out&#039; status and would give me trouble when trying to make further edits. I was editing/testing this master page and so i needed to constantly check in/out and when this glitch started it became a real pain. I didn&#039;t fix it but worked around it by closing the document, and then reopening the document which would clear the &#039;checked out&#039; status, and then would be able check out again.]]></description>
+			<content:encoded><![CDATA[<p>I had this same issue with Designer2007. When working with a master page, after a while it began hanging on to this &#8216;checked out&#8217; status and would give me trouble when trying to make further edits. I was editing/testing this master page and so i needed to constantly check in/out and when this glitch started it became a real pain. I didn&#8217;t fix it but worked around it by closing the document, and then reopening the document which would clear the &#8216;checked out&#8217; status, and then would be able check out again.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
