@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>Blogging &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>Blogging &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/blogging/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 14 Apr 2013 19:07:12 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:55:56 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,8 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Moved from Blogger to WordPress</title>
-		<link>./../../2013/04/moved-from-blogger-to-wordpress.html</link>
-					<comments>./../../2013/04/moved-from-blogger-to-wordpress.html#comments</comments>
+		<link>/2013/04/moved-from-blogger-to-wordpress.html</link>
+					<comments>/2013/04/moved-from-blogger-to-wordpress.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sun, 14 Apr 2013 19:07:12 +0000</pubDate>
@@ -35,7 +35,7 @@
 <p>So long story short, I&#8217;m hoping the move is seamless for my web traffic. If you see any problems please use my new contact form to let me know!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2013/04/moved-from-blogger-to-wordpress.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2013/04/moved-from-blogger-to-wordpress.html/feed</wfw:commentRss>
 			<slash:comments>4</slash:comments>
 		
 		

@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>adobe &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>adobe &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/adobe/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Wed, 10 Sep 2008 12:00:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:57:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Project Rosetta</title>
-		<link>./../../2008/09/project-rosetta.html</link>
-					<comments>./../../2008/09/project-rosetta.html#respond</comments>
+		<link>/2008/09/project-rosetta.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Wed, 10 Sep 2008 12:00:00 +0000</pubDate>
@@ -38,15 +37,13 @@
 <p><a href="http://www.projectrosetta.com/">Project Rosetta</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/09/project-rosetta.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Running Photoshop CS3 on Windows 2003</title>
-		<link>./../../2008/08/running-photoshop-cs3-on-windows-2003.html</link>
-					<comments>./../../2008/08/running-photoshop-cs3-on-windows-2003.html#comments</comments>
+		<link>/2008/08/running-photoshop-cs3-on-windows-2003.html</link>
+					<comments>/2008/08/running-photoshop-cs3-on-windows-2003.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 21 Aug 2008 22:11:00 +0000</pubDate>
@@ -66,15 +63,14 @@
 <p>You should now be able to install the software, I&#8217;m sure some things will work poorly, but this is the price you pay.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/08/running-photoshop-cs3-on-windows-2003.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/08/running-photoshop-cs3-on-windows-2003.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Old Posts</title>
-		<link>./../../2008/07/old-posts.html</link>
-					<comments>./../../2008/07/old-posts.html#respond</comments>
+		<link>/2008/07/old-posts.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Tue, 01 Jul 2008 17:58:00 +0000</pubDate>
@@ -85,15 +81,12 @@
 										<content:encoded><![CDATA[<p>My old posts can be seen at <a href="http://www.drisgill.com/">http://www.drisgill.com/</a> and the old RSS feed can be viewed at <a href="http://www.drisgill.com/feed.xml">www.drisgill.com/feed.xml</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/old-posts.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>GettyImages Moodstream</title>
-		<link>./../../2008/06/gettyimages-moodstream.html</link>
-					<comments>./../../2008/06/gettyimages-moodstream.html#respond</comments>
+		<link>/2008/06/gettyimages-moodstream.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Wed, 11 Jun 2008 17:45:00 +0000</pubDate>
@@ -106,8 +99,6 @@
 <p><a href="http://moodstream.gettyimages.com/">http://moodstream.gettyimages.com/</a> </p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/06/gettyimages-moodstream.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

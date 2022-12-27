@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>codeplex &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>codeplex &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/codeplex/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Thu, 27 Nov 2008 19:32:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:57:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,8 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>SharePoint Name.dll ActiveX Fix has been Featurized</title>
-		<link>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
-					<comments>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
+		<link>/2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
+					<comments>/2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 27 Nov 2008 19:32:00 +0000</pubDate>
@@ -35,7 +35,7 @@
 <p><a href="http://www.codeplex.com/SPAXO">CodePlex: SPAXO (SharePoint ActiveX Override)</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/11/sharepoint-namedll-activex-fix-has-been.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		

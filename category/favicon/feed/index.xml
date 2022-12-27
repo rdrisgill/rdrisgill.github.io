@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>favicon &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>favicon &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/favicon/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sat, 01 Mar 2008 00:06:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:58:14 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Favicon&#039;s in a SharePoint Master Page</title>
-		<link>./../../2008/02/favicons-in-sharepoint-master-page.html</link>
-					<comments>./../../2008/02/favicons-in-sharepoint-master-page.html#respond</comments>
+		<link>/2008/02/favicons-in-sharepoint-master-page.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sat, 01 Mar 2008 00:06:00 +0000</pubDate>
@@ -53,8 +52,6 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/02/favicons-in-sharepoint-master-page.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

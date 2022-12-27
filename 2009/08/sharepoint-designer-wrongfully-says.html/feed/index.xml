@@ -8,10 +8,10 @@
 <channel>
 	<title>
 	Comments on: SharePoint Designer wrongfully says a file is checked out when it is not	</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./</link>
+	<atom:link href="/2009/08/sharepoint-designer-wrongfully-says.html/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/08/sharepoint-designer-wrongfully-says.html</link>
 	<description></description>
-	<lastBuildDate>Tue, 23 Jan 2018 22:34:58 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:57:02 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
@@ -20,7 +20,7 @@
 	<item>
 		<title>
 		By: Emmy Eastwood		</title>
-		<link>./comment-page-1/index.html#comment-373</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-373</link>
 
 		<dc:creator><![CDATA[Emmy Eastwood]]></dc:creator>
 		<pubDate>Tue, 23 Jan 2018 22:34:58 +0000</pubDate>
@@ -34,7 +34,7 @@
 		<item>
 		<title>
 		By: Anonymous		</title>
-		<link>./comment-page-1/index.html#comment-372</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-372</link>
 
 		<dc:creator><![CDATA[Anonymous]]></dc:creator>
 		<pubDate>Thu, 25 May 2017 10:51:59 +0000</pubDate>
@@ -48,7 +48,7 @@
 		<item>
 		<title>
 		By: Nate		</title>
-		<link>./comment-page-1/index.html#comment-371</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-371</link>
 
 		<dc:creator><![CDATA[Nate]]></dc:creator>
 		<pubDate>Thu, 27 Apr 2017 16:56:33 +0000</pubDate>
@@ -62,7 +62,7 @@
 		<item>
 		<title>
 		By: Anonymous		</title>
-		<link>./comment-page-1/index.html#comment-358</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-358</link>
 
 		<dc:creator><![CDATA[Anonymous]]></dc:creator>
 		<pubDate>Thu, 17 Nov 2011 21:25:37 +0000</pubDate>
@@ -76,7 +76,7 @@
 		<item>
 		<title>
 		By: batyandres		</title>
-		<link>./comment-page-1/index.html#comment-357</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-357</link>
 
 		<dc:creator><![CDATA[batyandres]]></dc:creator>
 		<pubDate>Sat, 20 Aug 2011 17:05:19 +0000</pubDate>
@@ -90,7 +90,7 @@
 		<item>
 		<title>
 		By: Emmanuel		</title>
-		<link>./comment-page-1/index.html#comment-356</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-356</link>
 
 		<dc:creator><![CDATA[Emmanuel]]></dc:creator>
 		<pubDate>Fri, 09 Oct 2009 12:30:58 +0000</pubDate>
@@ -105,7 +105,7 @@
 		<item>
 		<title>
 		By: WYLIESHADOW		</title>
-		<link>./comment-page-1/index.html#comment-355</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-355</link>
 
 		<dc:creator><![CDATA[WYLIESHADOW]]></dc:creator>
 		<pubDate>Wed, 26 Aug 2009 12:39:29 +0000</pubDate>

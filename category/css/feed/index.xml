@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>css &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>css &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/css/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Thu, 04 Oct 2007 23:02:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:58:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Using Firebug to Manage CSS Effectively</title>
-		<link>./../../2007/10/using-firebug-to-manage-css-effectively.html</link>
-					<comments>./../../2007/10/using-firebug-to-manage-css-effectively.html#respond</comments>
+		<link>/2007/10/using-firebug-to-manage-css-effectively.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 04 Oct 2007 23:02:00 +0000</pubDate>
@@ -40,15 +39,13 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2007/10/using-firebug-to-manage-css-effectively.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>CSS Friendly Control Adapters in SharePoint 2007 (A Walk-Through)</title>
-		<link>./../../2007/03/css-friendly-control-adapters-in.html</link>
-					<comments>./../../2007/03/css-friendly-control-adapters-in.html#comments</comments>
+		<link>/2007/03/css-friendly-control-adapters-in.html</link>
+					<comments>/2007/03/css-friendly-control-adapters-in.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 08 Mar 2007 23:37:00 +0000</pubDate>
@@ -95,7 +92,7 @@
 <p>-John Ross</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2007/03/css-friendly-control-adapters-in.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2007/03/css-friendly-control-adapters-in.html/feed</wfw:commentRss>
 			<slash:comments>2</slash:comments>
 		
 		

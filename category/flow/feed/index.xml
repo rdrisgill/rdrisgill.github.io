@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>Flow &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>Flow &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/flow/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 31 Mar 2019 20:31:19 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:55:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Parallel Approvals using Microsoft Flow, Forms &#038; SharePoint</title>
-		<link>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
-					<comments>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html#respond</comments>
+		<link>/2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sun, 31 Mar 2019 20:31:19 +0000</pubDate>
@@ -63,8 +62,6 @@
 <p><a href="/wp-content/uploads/2019/03/entire-flow.png"><img decoding="async" loading="lazy" class="alignnone wp-image-1076 size-large" src="/wp-content/uploads/2019/03/entire-flow-506x1024.png" alt="entire flow" width="506" height="1024" srcset="/wp-content/uploads/2019/03/entire-flow-506x1024.png 506w, /wp-content/uploads/2019/03/entire-flow-148x300.png 148w, /wp-content/uploads/2019/03/entire-flow-768x1554.png 768w, /wp-content/uploads/2019/03/entire-flow-759x1536.png 759w, /wp-content/uploads/2019/03/entire-flow-1012x2048.png 1012w" sizes="(max-width: 506px) 100vw, 506px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

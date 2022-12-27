@@ -8,10 +8,10 @@
 <channel>
 	<title>
 	Comments on: SP2010 Branding Tip #2 – Custom Master Pages and Dialog Boxes	</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./</link>
+	<atom:link href="/2009/11/sp2010-branding-tip-2-custom-master.html/feed" rel="self" type="application/rss+xml" />
+	<link>/2009/11/sp2010-branding-tip-2-custom-master.html</link>
 	<description></description>
-	<lastBuildDate>Sat, 17 Jun 2017 14:50:32 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:57:01 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
@@ -20,7 +20,7 @@
 	<item>
 		<title>
 		By: webwmn		</title>
-		<link>./comment-page-1/index.html#comment-334</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-334</link>
 
 		<dc:creator><![CDATA[webwmn]]></dc:creator>
 		<pubDate>Sat, 17 Jun 2017 14:50:32 +0000</pubDate>
@@ -37,7 +37,7 @@ thanks]]></description>
 		<item>
 		<title>
 		By: webwmn		</title>
-		<link>./comment-page-1/index.html#comment-333</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-333</link>
 
 		<dc:creator><![CDATA[webwmn]]></dc:creator>
 		<pubDate>Fri, 16 Jun 2017 15:31:12 +0000</pubDate>
@@ -67,7 +67,7 @@ padding: 0px !important;<br />
 		<item>
 		<title>
 		By: Mahesh		</title>
-		<link>./comment-page-1/index.html#comment-332</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-332</link>
 
 		<dc:creator><![CDATA[Mahesh]]></dc:creator>
 		<pubDate>Sat, 06 Jun 2015 09:29:38 +0000</pubDate>
@@ -80,36 +80,8 @@ padding: 0px !important;<br />
 			</item>
 		<item>
 		<title>
-		By: Adrian Peraza		</title>
-		<link>./comment-page-1/index.html#comment-331</link>
-
-		<dc:creator><![CDATA[Adrian Peraza]]></dc:creator>
-		<pubDate>Wed, 28 May 2014 21:00:09 +0000</pubDate>
-		<guid isPermaLink="false">/?p=570#comment-331</guid>
-
-					<description><![CDATA[Hi Randy,
-
-Could you give me some help, with the following issue, please?
-
-I&#039;m applying a custom master page to subsite. After applied it, all forms used by libraries, lists give errors. (DispForm.aspx, EditForm.aspx, NewForm.aspx). I&#039;d would to like use the default sharepoint master page for this forms (for example V4.master)
-
-I&#039;ll appreciate any comment.
-
-Regards,
-Adrian]]></description>
-			<content:encoded><![CDATA[<p>Hi Randy,</p>
-<p>Could you give me some help, with the following issue, please?</p>
-<p>I&#8217;m applying a custom master page to subsite. After applied it, all forms used by libraries, lists give errors. (DispForm.aspx, EditForm.aspx, NewForm.aspx). I&#8217;d would to like use the default sharepoint master page for this forms (for example V4.master)</p>
-<p>I&#8217;ll appreciate any comment.</p>
-<p>Regards,<br />
-Adrian</p>
-]]></content:encoded>
-		
-			</item>
-		<item>
-		<title>
 		By: Clem		</title>
-		<link>./comment-page-1/index.html#comment-329</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-329</link>
 
 		<dc:creator><![CDATA[Clem]]></dc:creator>
 		<pubDate>Mon, 18 Nov 2013 12:47:42 +0000</pubDate>
@@ -123,7 +95,7 @@ Adrian</p>
 		<item>
 		<title>
 		By: Marie		</title>
-		<link>./comment-page-1/index.html#comment-328</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-328</link>
 
 		<dc:creator><![CDATA[Marie]]></dc:creator>
 		<pubDate>Mon, 28 Oct 2013 18:51:28 +0000</pubDate>
@@ -156,7 +128,7 @@ Marie]]></description>
 		<item>
 		<title>
 		By: larry		</title>
-		<link>./comment-page-1/index.html#comment-327</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-327</link>
 
 		<dc:creator><![CDATA[larry]]></dc:creator>
 		<pubDate>Tue, 27 Aug 2013 11:14:53 +0000</pubDate>
@@ -170,7 +142,7 @@ Marie]]></description>
 		<item>
 		<title>
 		By: Randy Drisgill		</title>
-		<link>./comment-page-1/index.html#comment-325</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-325</link>
 
 		<dc:creator><![CDATA[Randy Drisgill]]></dc:creator>
 		<pubDate>Fri, 23 Jul 2010 16:12:27 +0000</pubDate>
@@ -185,7 +157,7 @@ Marie]]></description>
 		<item>
 		<title>
 		By: wonderwoman		</title>
-		<link>./comment-page-1/index.html#comment-324</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-324</link>
 
 		<dc:creator><![CDATA[wonderwoman]]></dc:creator>
 		<pubDate>Fri, 23 Jul 2010 15:18:33 +0000</pubDate>
@@ -199,7 +171,7 @@ Marie]]></description>
 		<item>
 		<title>
 		By: Muhanad Omar		</title>
-		<link>./comment-page-1/index.html#comment-323</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-323</link>
 
 		<dc:creator><![CDATA[Muhanad Omar]]></dc:creator>
 		<pubDate>Sun, 06 Jun 2010 22:06:50 +0000</pubDate>
@@ -208,6 +180,20 @@ Marie]]></description>
 					<description><![CDATA[Thanks for the tip Randy, much appreciated!&lt;br /&gt;&lt;br /&gt;-Mo]]></description>
 			<content:encoded><![CDATA[<p>Thanks for the tip Randy, much appreciated!</p>
 <p>-Mo</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Randy Drisgill		</title>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-322</link>
+
+		<dc:creator><![CDATA[Randy Drisgill]]></dc:creator>
+		<pubDate>Tue, 01 Jun 2010 15:12:44 +0000</pubDate>
+		<guid isPermaLink="false">/?p=570#comment-322</guid>
+
+					<description><![CDATA[class=&quot;s4-notdlg&quot; goes in every div that you don&#039;t want to show in a dialog box. Common places would be the logo, navigation, and footer.]]></description>
+			<content:encoded><![CDATA[<p>class=&#8221;s4-notdlg&#8221; goes in every div that you don&#8217;t want to show in a dialog box. Common places would be the logo, navigation, and footer.</p>
 ]]></content:encoded>
 		
 			</item>

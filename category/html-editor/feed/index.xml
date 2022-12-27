@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>html editor &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>html editor &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/html-editor/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Mon, 07 May 2007 22:52:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:58:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,8 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>How to Add a Button to the HTML Editor Control in SharePoint</title>
-		<link>./../../2007/05/how-to-add-button-to-html-editor.html</link>
-					<comments>./../../2007/05/how-to-add-button-to-html-editor.html#comments</comments>
+		<link>/2007/05/how-to-add-button-to-html-editor.html</link>
+					<comments>/2007/05/how-to-add-button-to-html-editor.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Mon, 07 May 2007 22:52:00 +0000</pubDate>
@@ -105,7 +105,7 @@
 </blockquote>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2007/05/how-to-add-button-to-html-editor.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2007/05/how-to-add-button-to-html-editor.html/feed</wfw:commentRss>
 			<slash:comments>2</slash:comments>
 		
 		

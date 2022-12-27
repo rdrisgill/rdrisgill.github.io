@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments for Randy Drisgill	</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../index.html</link>
+	Comments for Randy Drisgill &#8211; Blog Archive	</title>
+	<atom:link href="/comments/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Tue, 13 Feb 2018 19:00:57 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:57:02 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
@@ -20,7 +20,7 @@
 	<item>
 		<title>
 		Comment on Video: State of Comms Sites &#038; UI Customization in SP Online by Guy Lee		</title>
-		<link>./../2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html/comment-page-1/index.html#comment-807</link>
+		<link>/2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html/comment-page-1#comment-807</link>
 
 		<dc:creator><![CDATA[Guy Lee]]></dc:creator>
 		<pubDate>Tue, 13 Feb 2018 19:00:57 +0000</pubDate>
@@ -34,7 +34,7 @@
 		<item>
 		<title>
 		Comment on Design Manager Bug &#8211; SharePoint 2013 RTM by Onedram		</title>
-		<link>./../2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1/index.html#comment-623</link>
+		<link>/2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1#comment-623</link>
 
 		<dc:creator><![CDATA[Onedram]]></dc:creator>
 		<pubDate>Tue, 30 Jan 2018 07:58:43 +0000</pubDate>
@@ -48,7 +48,7 @@
 		<item>
 		<title>
 		Comment on SharePoint Designer wrongfully says a file is checked out when it is not by Emmy Eastwood		</title>
-		<link>./../2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1/index.html#comment-373</link>
+		<link>/2009/08/sharepoint-designer-wrongfully-says.html/comment-page-1#comment-373</link>
 
 		<dc:creator><![CDATA[Emmy Eastwood]]></dc:creator>
 		<pubDate>Tue, 23 Jan 2018 22:34:58 +0000</pubDate>
@@ -62,7 +62,7 @@
 		<item>
 		<title>
 		Comment on SharePoint 2013 Basic Search Center Branding Problem by Kevin Caron		</title>
-		<link>./../2013/04/sharepoint-2013-standard-search-center-branding.html/comment-page-1/index.html#comment-731</link>
+		<link>/2013/04/sharepoint-2013-standard-search-center-branding.html/comment-page-1#comment-731</link>
 
 		<dc:creator><![CDATA[Kevin Caron]]></dc:creator>
 		<pubDate>Mon, 25 Sep 2017 18:17:02 +0000</pubDate>
@@ -79,7 +79,7 @@ And yeah both web parts had errors for me too, I had to replace the old ones.]]>
 		<item>
 		<title>
 		Comment on Getting Started Video &#8211; SharePoint Framework (SPFx) Development by Julia		</title>
-		<link>./../2016/11/getting-started-video-sharepoint-framework-spfx-development.html/comment-page-1/index.html#comment-806</link>
+		<link>/2016/11/getting-started-video-sharepoint-framework-spfx-development.html/comment-page-1#comment-806</link>
 
 		<dc:creator><![CDATA[Julia]]></dc:creator>
 		<pubDate>Mon, 28 Aug 2017 14:39:17 +0000</pubDate>
@@ -93,7 +93,7 @@ And yeah both web parts had errors for me too, I had to replace the old ones.]]>
 		<item>
 		<title>
 		Comment on Design Manager Bug &#8211; SharePoint 2013 RTM by DC		</title>
-		<link>./../2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1/index.html#comment-622</link>
+		<link>/2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1#comment-622</link>
 
 		<dc:creator><![CDATA[DC]]></dc:creator>
 		<pubDate>Wed, 09 Aug 2017 12:32:58 +0000</pubDate>
@@ -107,7 +107,7 @@ And yeah both web parts had errors for me too, I had to replace the old ones.]]>
 		<item>
 		<title>
 		Comment on Design Manager Bug &#8211; SharePoint 2013 RTM by Vipul Jain		</title>
-		<link>./../2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1/index.html#comment-621</link>
+		<link>/2012/12/design-manager-bug-sharepoint-2013-rtm.html/comment-page-1#comment-621</link>
 
 		<dc:creator><![CDATA[Vipul Jain]]></dc:creator>
 		<pubDate>Fri, 21 Jul 2017 03:21:49 +0000</pubDate>
@@ -121,7 +121,7 @@ And yeah both web parts had errors for me too, I had to replace the old ones.]]>
 		<item>
 		<title>
 		Comment on Getting Started Video &#8211; SharePoint Framework (SPFx) Development by Test		</title>
-		<link>./../2016/11/getting-started-video-sharepoint-framework-spfx-development.html/comment-page-1/index.html#comment-805</link>
+		<link>/2016/11/getting-started-video-sharepoint-framework-spfx-development.html/comment-page-1#comment-805</link>
 
 		<dc:creator><![CDATA[Test]]></dc:creator>
 		<pubDate>Mon, 03 Jul 2017 12:36:57 +0000</pubDate>
@@ -135,7 +135,7 @@ And yeah both web parts had errors for me too, I had to replace the old ones.]]>
 		<item>
 		<title>
 		Comment on SP2010 Branding Tip #2 – Custom Master Pages and Dialog Boxes by webwmn		</title>
-		<link>./../2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1/index.html#comment-334</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-334</link>
 
 		<dc:creator><![CDATA[webwmn]]></dc:creator>
 		<pubDate>Sat, 17 Jun 2017 14:50:32 +0000</pubDate>
@@ -152,7 +152,7 @@ thanks]]></description>
 		<item>
 		<title>
 		Comment on SP2010 Branding Tip #2 – Custom Master Pages and Dialog Boxes by webwmn		</title>
-		<link>./../2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1/index.html#comment-333</link>
+		<link>/2009/11/sp2010-branding-tip-2-custom-master.html/comment-page-1#comment-333</link>
 
 		<dc:creator><![CDATA[webwmn]]></dc:creator>
 		<pubDate>Fri, 16 Jun 2017 15:31:12 +0000</pubDate>

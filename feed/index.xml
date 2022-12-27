@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./index.html</link>
+	<title>Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Sun, 08 Mar 2020 22:55:48 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:55:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,7 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>PowerShell: Create SharePoint Online pages from a template and add them to navigation</title>
-		<link>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html</link>
-					<comments>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html#respond</comments>
+		<link>/2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sun, 08 Mar 2020 22:55:48 +0000</pubDate>
@@ -101,15 +100,12 @@ foreach ($row in $CSV) {
 <p><img decoding="async" loading="lazy" class="alignnone size-large wp-image-1113" src="/wp-content/uploads/2020/03/site-contents-1024x664.png" alt="site contents" width="1024" height="664" srcset="/wp-content/uploads/2020/03/site-contents-1024x664.png 1024w, /wp-content/uploads/2020/03/site-contents-300x194.png 300w, /wp-content/uploads/2020/03/site-contents-768x498.png 768w, /wp-content/uploads/2020/03/site-contents-1536x996.png 1536w, /wp-content/uploads/2020/03/site-contents.png 1794w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2020/03/powershell-create-sharepoint-online-pages-from-a-template-and-add-them-to-navigation.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Ignite Live Blog: THR2070 &#8211; Ten Microsoft Teams tips in twenty minutes</title>
-		<link>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html</link>
-					<comments>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html#respond</comments>
+		<link>/2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Tue, 12 Nov 2019 18:49:14 +0000</pubDate>
@@ -123,15 +119,12 @@ foreach ($row in $CSV) {
 <p><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1102" src="/wp-content/uploads/2020/03/ignite-2.jpg" alt="ignite 2" width="999" height="749" srcset="/wp-content/uploads/2020/03/ignite-2.jpg 999w, /wp-content/uploads/2020/03/ignite-2-300x225.jpg 300w, /wp-content/uploads/2020/03/ignite-2-768x576.jpg 768w" sizes="(max-width: 999px) 100vw, 999px" /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2019/11/ignite-live-blog-thr2070-ten-microsoft-teams-tips-in-twenty-minutes.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Ignite Live Blog: THR1079 &#8211; Streamline Business Processes w/Microsoft Teams &#038; Power Apps</title>
-		<link>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html</link>
-					<comments>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html#respond</comments>
+		<link>/2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Wed, 06 Nov 2019 18:43:34 +0000</pubDate>
@@ -145,15 +138,12 @@ foreach ($row in $CSV) {
 <p><img decoding="async" loading="lazy" class="alignnone size-full wp-image-1098" src="/wp-content/uploads/2020/03/ignite-1.jpeg" alt="ignite 1" width="999" height="749" srcset="/wp-content/uploads/2020/03/ignite-1.jpeg 999w, /wp-content/uploads/2020/03/ignite-1-300x225.jpeg 300w, /wp-content/uploads/2020/03/ignite-1-768x576.jpeg 768w" sizes="(max-width: 999px) 100vw, 999px" /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2019/11/ignite-live-blog-thr1079-streamline-business-processes-wmicrosoft-teams-power-apps.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Parallel Approvals using Microsoft Flow, Forms &#038; SharePoint</title>
-		<link>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
-					<comments>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html#respond</comments>
+		<link>/2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sun, 31 Mar 2019 20:31:19 +0000</pubDate>
@@ -194,15 +184,12 @@ foreach ($row in $CSV) {
 <p><a href="/wp-content/uploads/2019/03/entire-flow.png"><img decoding="async" loading="lazy" class="alignnone wp-image-1076 size-large" src="/wp-content/uploads/2019/03/entire-flow-506x1024.png" alt="entire flow" width="506" height="1024" srcset="/wp-content/uploads/2019/03/entire-flow-506x1024.png 506w, /wp-content/uploads/2019/03/entire-flow-148x300.png 148w, /wp-content/uploads/2019/03/entire-flow-768x1554.png 768w, /wp-content/uploads/2019/03/entire-flow-759x1536.png 759w, /wp-content/uploads/2019/03/entire-flow-1012x2048.png 1012w" sizes="(max-width: 506px) 100vw, 506px" /></a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2019/03/parallel-approvals-using-microsoft-flow-forms-sharepoint-part-1.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Starter Master Pages moved from Codeplex to Github</title>
-		<link>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html</link>
-					<comments>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html#respond</comments>
+		<link>/2018/02/starter-master-pages-moved-from-codeplex-to-github.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sun, 25 Feb 2018 18:58:48 +0000</pubDate>
@@ -214,15 +201,13 @@ foreach ($row in $CSV) {
 <p><a href="https://github.com/rdrisgill?utf8=%E2%9C%93&amp;tab=repositories&amp;q=starter">https://github.com/rdrisgill</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2018/02/starter-master-pages-moved-from-codeplex-to-github.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Video: State of Comms Sites &#038; UI Customization in SP Online</title>
-		<link>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html</link>
-					<comments>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html#comments</comments>
+		<link>/2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html</link>
+					<comments>/2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Mon, 15 Jan 2018 22:07:08 +0000</pubDate>
@@ -237,15 +222,14 @@ foreach ($row in $CSV) {
 <p>#c365global17drisgill_session from <a href="https://vimeo.com/user12783938">Mark Jones</a> on <a href="https://vimeo.com/">Vimeo</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2018/01/video-state-of-comms-sites-ui-customization-in-sp-online.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Watch my virtual session: State of Comms Sites &#038; UI Customization in SP Online</title>
-		<link>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html</link>
-					<comments>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html#respond</comments>
+		<link>/2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Fri, 20 Oct 2017 18:53:23 +0000</pubDate>
@@ -271,15 +255,13 @@ foreach ($row in $CSV) {
 </ol>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2017/10/watch-my-virtual-session-state-of-comms-sites-ui-customization-in-sp-online.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Getting Started Video &#8211; SharePoint Framework (SPFx) Development</title>
-		<link>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html</link>
-					<comments>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html#comments</comments>
+		<link>/2016/11/getting-started-video-sharepoint-framework-spfx-development.html</link>
+					<comments>/2016/11/getting-started-video-sharepoint-framework-spfx-development.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 17 Nov 2016 20:01:54 +0000</pubDate>
@@ -292,15 +274,15 @@ foreach ($row in $CSV) {
 <p>https://youtube.com/watch?v=b_1jM3vkCZw</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2016/11/getting-started-video-sharepoint-framework-spfx-development.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2016/11/getting-started-video-sharepoint-framework-spfx-development.html/feed</wfw:commentRss>
 			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>My Post-Ignite 2016 Report – The State of SharePoint and Office 365</title>
-		<link>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html</link>
-					<comments>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html#comments</comments>
+		<link>/2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html</link>
+					<comments>/2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 13 Oct 2016 19:45:10 +0000</pubDate>
@@ -375,15 +357,14 @@ foreach ($row in $CSV) {
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2016/10/my-post-ignite-2016-report-the-state-of-sharepoint-and-office-365.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>SharePoint 2016: Home of Your New Intelligent Intranet</title>
-		<link>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html</link>
-					<comments>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html#respond</comments>
+		<link>/2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Wed, 04 May 2016 18:33:17 +0000</pubDate>
@@ -415,8 +396,6 @@ foreach ($row in $CSV) {
 </div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./2016/05/sharepoint-2016-home-of-your-new-intelligent-intranet.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

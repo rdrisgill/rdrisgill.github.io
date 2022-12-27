@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>activex &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>activex &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/activex/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Thu, 27 Nov 2008 19:32:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:58:16 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,8 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>SharePoint Name.dll ActiveX Fix has been Featurized</title>
-		<link>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
-					<comments>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
+		<link>/2008/11/sharepoint-namedll-activex-fix-has-been.html</link>
+					<comments>/2008/11/sharepoint-namedll-activex-fix-has-been.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 27 Nov 2008 19:32:00 +0000</pubDate>
@@ -35,15 +35,14 @@
 <p><a href="http://www.codeplex.com/SPAXO">CodePlex: SPAXO (SharePoint ActiveX Override)</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/11/sharepoint-namedll-activex-fix-has-been.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/11/sharepoint-namedll-activex-fix-has-been.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Update to my SharePoint Name.dll ActiveX Fix</title>
-		<link>./../../2008/01/update-to-my-sharepoint-namedll-activex.html</link>
-					<comments>./../../2008/01/update-to-my-sharepoint-namedll-activex.html#respond</comments>
+		<link>/2008/01/update-to-my-sharepoint-namedll-activex.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Tue, 29 Jan 2008 00:06:00 +0000</pubDate>
@@ -60,15 +59,13 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/01/update-to-my-sharepoint-namedll-activex.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Fixing the name.dll ActiveX Problem the Mossman Way</title>
-		<link>./../../2007/09/fixing-namedll-activex-problem-mossman.html</link>
-					<comments>./../../2007/09/fixing-namedll-activex-problem-mossman.html#comments</comments>
+		<link>/2007/09/fixing-namedll-activex-problem-mossman.html</link>
+					<comments>/2007/09/fixing-namedll-activex-problem-mossman.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 13 Sep 2007 23:03:00 +0000</pubDate>
@@ -102,8 +99,8 @@
 </div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2007/09/fixing-namedll-activex-problem-mossman.html/feed/index.html</wfw:commentRss>
-			<slash:comments>5</slash:comments>
+					<wfw:commentRss>/2007/09/fixing-namedll-activex-problem-mossman.html/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
 		
 		
 			</item>

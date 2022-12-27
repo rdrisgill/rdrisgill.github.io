@@ -8,11 +8,11 @@
 	>
 
 <channel>
-	<title>customization &#8211; Randy Drisgill</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../../index.html</link>
+	<title>customization &#8211; Randy Drisgill &#8211; Blog Archive</title>
+	<atom:link href="/category/customization/feed" rel="self" type="application/rss+xml" />
+	<link>/</link>
 	<description></description>
-	<lastBuildDate>Thu, 07 Aug 2008 19:08:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 02:58:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -21,8 +21,8 @@
 	<generator>https://wordpress.org/?v=6.1</generator>
 	<item>
 		<title>Disabling Themes on Custom Master Pages</title>
-		<link>./../../2008/08/disabling-themes-on-custom-master-pages.html</link>
-					<comments>./../../2008/08/disabling-themes-on-custom-master-pages.html#comments</comments>
+		<link>/2008/08/disabling-themes-on-custom-master-pages.html</link>
+					<comments>/2008/08/disabling-themes-on-custom-master-pages.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 07 Aug 2008 19:08:00 +0000</pubDate>
@@ -37,15 +37,15 @@
 <p>This ends up telling SharePoint to just go ahead and load the theme. The next maddening thing I found was that some master pages weren&#8217;t having the theme applied. Turns out, the key to having SharePoint NOT apply the theme automagically is to have a master page that is NOT customized (or one that is ghosted if you prefer that lingo). If you apply your custom master page from a Feature instead of customizing it with SharePoint designer, SharePoint will no longer add the meta tag and thus will not load the theme. So, there you have it, one more reason not to customize master pages in production.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/08/disabling-themes-on-custom-master-pages.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/08/disabling-themes-on-custom-master-pages.html/feed</wfw:commentRss>
 			<slash:comments>8</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Turning on Detailed Error Messages in SharePoint 2007</title>
-		<link>./../../2008/07/turning-on-detailed-error-messages-in.html</link>
-					<comments>./../../2008/07/turning-on-detailed-error-messages-in.html#comments</comments>
+		<link>/2008/07/turning-on-detailed-error-messages-in.html</link>
+					<comments>/2008/07/turning-on-detailed-error-messages-in.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Fri, 01 Aug 2008 04:23:00 +0000</pubDate>
@@ -66,15 +66,14 @@
 <p>Once you have made these changes, the error message should now provide a lot more helpful information such as “<em>Cannot find ContentPlaceHolder &#8216;PlaceHolderPageImage&#8217; in the master page &#8216;/_catalogs/masterpage/custom.master&#8217;, verify content control&#8217;s ContentPlaceHolderID attribute in the content page</em>”.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/turning-on-detailed-error-messages-in.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/07/turning-on-detailed-error-messages-in.html/feed</wfw:commentRss>
 			<slash:comments>1</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Quick Hack: Show Which Web Front End is Being Browsed</title>
-		<link>./../../2008/07/quick-hack-show-which-web-front-end-is.html</link>
-					<comments>./../../2008/07/quick-hack-show-which-web-front-end-is.html#respond</comments>
+		<link>/2008/07/quick-hack-show-which-web-front-end-is.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Fri, 25 Jul 2008 16:07:00 +0000</pubDate>
@@ -91,15 +90,13 @@
 <blockquote><p>Web Server 1 > Site Name > Subsite Name</p></blockquote>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/quick-hack-show-which-web-front-end-is.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Master Page Error: &#034;The site master page setting currently applied to this site is invalid. Please select a new master page and apply it.&#034;</title>
-		<link>./../../2008/07/master-page-error-site-master-page.html</link>
-					<comments>./../../2008/07/master-page-error-site-master-page.html#comments</comments>
+		<link>/2008/07/master-page-error-site-master-page.html</link>
+					<comments>/2008/07/master-page-error-site-master-page.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Tue, 22 Jul 2008 18:46:00 +0000</pubDate>
@@ -118,15 +115,15 @@
 <p><span>Essentially this has to do with the Team sites not having publishing enabled, which is frustrating because you will run into this even if you aren&#8217;t using any publishing specific items in your master page. The only way they list for automatically correcting is by using Feature Stapling.</span><br /><span></span></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/master-page-error-site-master-page.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/07/master-page-error-site-master-page.html/feed</wfw:commentRss>
 			<slash:comments>2</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Minimal Meeting Workspace Master Page</title>
-		<link>./../../2008/07/minimal-meeting-workspace-master-page.html</link>
-					<comments>./../../2008/07/minimal-meeting-workspace-master-page.html#comments</comments>
+		<link>/2008/07/minimal-meeting-workspace-master-page.html</link>
+					<comments>/2008/07/minimal-meeting-workspace-master-page.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Thu, 10 Jul 2008 15:44:00 +0000</pubDate>
@@ -150,15 +147,14 @@
 </ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/minimal-meeting-workspace-master-page.html/feed/index.html</wfw:commentRss>
+					<wfw:commentRss>/2008/07/minimal-meeting-workspace-master-page.html/feed</wfw:commentRss>
 			<slash:comments>3</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>New Article: Automated SharePoint Site Branding</title>
-		<link>./../../2008/07/new-article-automated-sharepoint-site.html</link>
-					<comments>./../../2008/07/new-article-automated-sharepoint-site.html#respond</comments>
+		<link>/2008/07/new-article-automated-sharepoint-site.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Mon, 07 Jul 2008 14:26:00 +0000</pubDate>
@@ -171,15 +167,13 @@
 <p><a href="http://msdn.microsoft.com/en-us/magazine/cc700347.aspx">Automated SharePoint Site Branding</a></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/07/new-article-automated-sharepoint-site.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Common Theme Problem: &#034;Write Error on file _themes\&#034;</title>
-		<link>./../../2008/06/commong-them-problem-write-error-on.html</link>
-					<comments>./../../2008/06/commong-them-problem-write-error-on.html#comments</comments>
+		<link>/2008/06/commong-them-problem-write-error-on.html</link>
+					<comments>/2008/06/commong-them-problem-write-error-on.html#comments</comments>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Fri, 13 Jun 2008 03:31:00 +0000</pubDate>
@@ -193,15 +187,14 @@
 <p>Typically, this error happens when you are making changes to a theme and decide to make backups of some of your images by doing a simple file copy and paste. I&#8217;m not exactly sure what about this process causes the error, but simply moving the copied files to the desktop (or somewhere other then the theme folder) should correct the problem. Be sure to perform another IISRESET before re-selecting the theme.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/06/commong-them-problem-write-error-on.html/feed/index.html</wfw:commentRss>
-			<slash:comments>5</slash:comments>
+					<wfw:commentRss>/2008/06/commong-them-problem-write-error-on.html/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Favicon&#039;s in a SharePoint Master Page</title>
-		<link>./../../2008/02/favicons-in-sharepoint-master-page.html</link>
-					<comments>./../../2008/02/favicons-in-sharepoint-master-page.html#respond</comments>
+		<link>/2008/02/favicons-in-sharepoint-master-page.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Sat, 01 Mar 2008 00:06:00 +0000</pubDate>
@@ -232,15 +225,12 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/02/favicons-in-sharepoint-master-page.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Mossman&#039;s Weather Web Part</title>
-		<link>./../../2008/02/mossmans-weather-web-part.html</link>
-					<comments>./../../2008/02/mossmans-weather-web-part.html#respond</comments>
+		<link>/2008/02/mossmans-weather-web-part.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Wed, 27 Feb 2008 19:52:00 +0000</pubDate>
@@ -261,15 +251,12 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/02/mossmans-weather-web-part.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Update to my SharePoint Name.dll ActiveX Fix</title>
-		<link>./../../2008/01/update-to-my-sharepoint-namedll-activex.html</link>
-					<comments>./../../2008/01/update-to-my-sharepoint-namedll-activex.html#respond</comments>
+		<link>/2008/01/update-to-my-sharepoint-namedll-activex.html</link>
 		
 		<dc:creator><![CDATA[randy]]></dc:creator>
 		<pubDate>Tue, 29 Jan 2008 00:06:00 +0000</pubDate>
@@ -286,8 +273,6 @@
 </p></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>./../../2008/01/update-to-my-sharepoint-namedll-activex.html/feed/index.html</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
